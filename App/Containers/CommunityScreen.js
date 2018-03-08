@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
-
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default class CommunityScreen extends Component {
 
 	static navigationOptions = {
     tabBarLabel: "Community",
+    tabBarIcon: ({ tintColor }) => <Icon name="users" size={20} color={tintColor}/>
   }
 
   render () {

@@ -1,10 +1,10 @@
 import { StackNavigator, TabNavigator } from 'react-navigation'
 import LaunchScreen from '../Containers/LaunchScreen'
-
 import TreeScreen from '../Containers/TreeScreen'
 import ActivitiesScreen from '../Containers/ActivitiesScreen'
 import InsightScreen from '../Containers/InsightScreen'
 import CommunityScreen from '../Containers/CommunityScreen'
+
 import styles from './Styles/NavigationStyles'
 
 // Manifest of possible screens
@@ -33,8 +33,6 @@ var MainScreenNavigator = TabNavigator({
 MainScreenNavigator.navigationOptions = {
   title: "Tab Example"
 }
-
-
 
 const PrimaryNav = StackNavigator({
   LaunchScreen: { screen: LaunchScreen }
