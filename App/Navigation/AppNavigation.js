@@ -35,6 +35,7 @@ MainScreenNavigator.navigationOptions = {
 }
 
 const PrimaryNav = StackNavigator({
+  ActivitiesScreen: { screen: ActivitiesScreen },
   LaunchScreen: { screen: LaunchScreen }
 }, {
   // Default config for all screens
