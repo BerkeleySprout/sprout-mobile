@@ -31,7 +31,7 @@ var MainScreenNavigator = TabNavigator({
 );
 
 MainScreenNavigator.navigationOptions = {
-  title: "Tab Example"
+  title: "Navigation Tab"
 }
 
 const PrimaryNav = StackNavigator({
