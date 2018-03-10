@@ -4,8 +4,9 @@ import TreeScreen from '../Containers/TreeScreen'
 import ActivitiesScreen from '../Containers/ActivitiesScreen'
 import InsightScreen from '../Containers/InsightScreen'
 import CommunityScreen from '../Containers/CommunityScreen'
-
+import { ApplicationStyles, Metrics, Colors } from '../Themes'
 import styles from './Styles/NavigationStyles'
+
 
 // Manifest of possible screens
 var MainScreenNavigator = TabNavigator({
@@ -24,8 +25,7 @@ var MainScreenNavigator = TabNavigator({
 },
   {
     tabBarOptions: {
-      activeTintColor: "white",
-      activeBackgroundColor: "green"
+      activeTintColor: Colors.nephritis,
     }
   }
 );

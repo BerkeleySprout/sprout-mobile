@@ -5,18 +5,20 @@ export default StyleSheet.create({
   ...ApplicationStyles.screen,
   container: {
     flex: 1,
-    backgroundColor: Colors.background
+    backgroundColor: Colors.background,
+    margin: Metrics.smallMargin
   },
   row: {
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 220,
     justifyContent: 'center',
     alignItems: 'center',
     margin: Metrics.baseMargin,
-    backgroundColor: Colors.fire,
+    backgroundColor: Colors.nephritis,
     borderRadius: Metrics.smallMargin
   },
   sectionHeader: {
+    fontWeight: 'bold',
     paddingTop: Metrics.doubleBaseMargin,
     width: Metrics.screenWidth,
     alignSelf: 'center',
@@ -26,13 +28,13 @@ export default StyleSheet.create({
   boldLabel: {
     fontWeight: 'bold',
     alignSelf: 'center',
-    color: Colors.snow,
+    color: Colors.text,
     textAlign: 'center',
     marginBottom: Metrics.smallMargin
   },
   label: {
     alignSelf: 'center',
-    color: Colors.snow,
+    color: Colors.text,
     textAlign: 'center'
   },
   listContent: {

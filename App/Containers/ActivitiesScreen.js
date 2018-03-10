@@ -23,7 +23,7 @@ export default class ActivitiesScreen extends React.PureComponent {
   state = {
     data: [
       {
-        key: 'First',
+        key: 'Awe',
         data: [
           {title: 'First Title', description: 'First Description'},
           {title: 'Second Title', description: 'Second Description'},
@@ -33,23 +33,18 @@ export default class ActivitiesScreen extends React.PureComponent {
           {title: 'Sixth Title', description: 'Sixth Description'},
           {title: 'Seventh Title', description: 'Seventh Description'},
           {title: 'Eighth Title', description: 'Eighth Description'},
-          {title: 'Ninth Title', description: 'Ninth Description'},
-          {title: 'Tenth Title', description: 'Tenth Description'}
         ]
       }, {
-        key: 'Second',
+        key: 'Gratitude',
         data: [
+          {title: 'Ninth Title', description: 'Ninth Description'},
+          {title: 'Tenth Title', description: 'Tenth Description'},
           {title: 'Eleventh Title', description: 'Eleventh Description'},
           {title: '12th Title', description: '12th Description'},
           {title: '13th Title', description: '13th Description'},
           {title: '14th Title', description: '14th Description'},
           {title: '15th Title', description: '15th Description'},
           {title: '16th Title', description: '16th Description'},
-          {title: '17th Title', description: '17th Description'},
-          {title: '18th Title', description: '18th Description'},
-          {title: '19th Title', description: '19th Description'},
-          {title: '20th Title', description: '20th Description'},
-          {title: 'BLACKJACK!', description: 'BLACKJACK! Description'}
         ]
       }
     ]
@@ -72,7 +67,7 @@ export default class ActivitiesScreen extends React.PureComponent {
   renderItem ({section, item}) {
     return (
       <View style={styles.row}>
-        <Text style={styles.boldLabel}>Section {section.key} - {item.title}</Text>
+        <Text style={styles.boldLabel}>{item.title}</Text>
         <Text style={styles.label}>{item.description}</Text>
       </View>
     )
@@ -81,10 +76,10 @@ export default class ActivitiesScreen extends React.PureComponent {
   // Conditional branching for section headers, also see step 3
   renderSectionHeader ({section}) {
     switch (section.key) {
-      case 'First':
-        return <View style={styles.sectionHeader}><Text style={styles.boldLabel}>First Section</Text></View>
+      case 'Awe':
+        return <View style={styles.sectionHeader}><Text style={styles.boldLabel}>Awe Activities</Text></View>
       default:
-        return <View style={styles.sectionHeader}><Text style={styles.boldLabel}>Second Section</Text></View>
+        return <View style={styles.sectionHeader}><Text style={styles.boldLabel}>Gratitude Activities</Text></View>
     }
   }
 
@@ -97,25 +92,19 @@ export default class ActivitiesScreen extends React.PureComponent {
   *************************************************************/
   // Render a header?
   renderHeader = () =>
-    <Text style={[styles.label, styles.sectionHeader]}> - Full List Header - </Text>
+    <Text style={[styles.label, styles.sectionHeader]}> Wellness Activities </Text>
 
   // Render a footer?
   renderFooter = () =>
-    <Text style={[styles.label, styles.sectionHeader]}> - Full List Footer - </Text>
-
-  // Does each section need a footer?
-  renderSectionFooter = () =>
-    <Text style={styles.label}> END SECTION!!!! </Text>
+    <Text style={[styles.label, styles.sectionHeader]}></Text>
 
   // Show this when data is empty
   renderEmpty = () =>
     <Text style={styles.label}> - Nothing to See Here - </Text>
 
   renderSeparator = () =>
-    <Text style={styles.label}> - ~~~~~ - </Text>
+    <Text style={styles.label}></Text>
 
-  renderSectionSeparator = () =>
-    <Text style={styles.label}> \/\/\/\/\/\/\/\/ </Text>
 
   // The default function if no Key is provided is index
   // an identifiable key is important if you plan on
@@ -151,11 +140,7 @@ export default class ActivitiesScreen extends React.PureComponent {
           keyExtractor={this.keyExtractor}
           initialNumToRender={this.oneScreensWorth}
           ListHeaderComponent={this.renderHeader}
-          SectionSeparatorComponent={this.renderSectionSeparator}
-          ListFooterComponent={this.renderFooter}
-          ListEmptyComponent={this.renderEmpty}
-          ItemSeparatorComponent={this.renderSeparator}
-          renderSectionFooter={this.renderSectionFooter}
+          stickySectionHeadersEnabled={false}
         />
       </View>
     )
