@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, SectionList, Text } from 'react-native'
+import { View, SectionList, Text, ImageBackground, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome'
 // More info here: https://facebook.github.io/react-native/docs/sectionlist.html
@@ -66,10 +66,15 @@ export default class ActivitiesScreen extends React.PureComponent {
   *************************************************************/
   renderItem ({section, item}) {
     return (
-      <View style={styles.row}>
+      <TouchableOpacity style={styles.row}>
+        <ImageBackground
+        style={styles.imageBackground}
+        source={{ uri: item.img }}
+      >
         <Text style={styles.boldLabel}>{item.title}</Text>
         <Text style={styles.label}>{item.description}</Text>
-      </View>
+        </ImageBackground>
+      </TouchableOpacity>
     )
   }
 
@@ -79,13 +84,6 @@ export default class ActivitiesScreen extends React.PureComponent {
     
   }
 
-  /* ***********************************************************
-  * STEP 2
-  * Consider the configurations we've set below.  Customize them
-  * to your liking!  Each with some friendly advice.
-  *
-  * Removing a function here will make SectionList use default
-  *************************************************************/
   // Render a header?
   renderHeader = () =>
     <Text style={[styles.label, styles.sectionHeader]}> Wellness Activities </Text>
@@ -128,6 +126,7 @@ export default class ActivitiesScreen extends React.PureComponent {
     return (
       <View style={styles.container}>
         <SectionList
+          numColumns={2}
           renderSectionHeader={this.renderSectionHeader}
           sections={this.state.data}
           contentContainerStyle={styles.listContent}

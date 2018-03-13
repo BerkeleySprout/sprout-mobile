@@ -3,6 +3,7 @@ const colors = {
   emerald: '#2ecc71',
   nephritis: '#27ae60',
   clear: 'rgba(0,0,0,0)',
+  transparent: 'rgba(0,0,0,0.5)',
   facebook: '#3b5998',
   concrete: '#95A5A6',
   silver: '#F7F7F7',
@@ -23,7 +24,8 @@ const colors = {
   eggplant: '#251a34',
   border: '#483F53',
   banner: '#5F3E63',
-  text: '#333333'
+  text: '#333333',
+  textSecondary: '#757575'
 }
 
 export default colors
