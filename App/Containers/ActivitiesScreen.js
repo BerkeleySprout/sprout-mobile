@@ -75,12 +75,7 @@ export default class ActivitiesScreen extends React.PureComponent {
 
   // Conditional branching for section headers, also see step 3
   renderSectionHeader ({section}) {
-    switch (section.key) {
-      case 'Awe':
-        return <View style={styles.sectionHeader}><Text style={styles.boldLabel}>Awe Activities</Text></View>
-      default:
-        return <View style={styles.sectionHeader}><Text style={styles.boldLabel}>Gratitude Activities</Text></View>
-    }
+    return <View style={styles.sectionHeader}><Text style={styles.boldLabel}>{section.key}</Text></View>
   }
 
   /* ***********************************************************
