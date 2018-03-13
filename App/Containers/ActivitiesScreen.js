@@ -69,10 +69,12 @@ export default class ActivitiesScreen extends React.PureComponent {
       <TouchableOpacity style={styles.row}>
         <ImageBackground
         style={styles.imageBackground}
+        resizeMode={'cover'}
         source={{ uri: item.img }}
-      >
-        <Text style={styles.boldLabel}>{item.title}</Text>
-        <Text style={styles.label}>{item.description}</Text>
+        >
+          <View style={styles.overlay}/>
+          <Text style={styles.boldLabel}>{item.title}</Text>
+          <Text style={styles.label}>{item.description}</Text>
         </ImageBackground>
       </TouchableOpacity>
     )
@@ -80,8 +82,7 @@ export default class ActivitiesScreen extends React.PureComponent {
 
   // Conditional branching for section headers, also see step 3
   renderSectionHeader ({section}) {
-    return <View style={styles.sectionHeader}><Text style={styles.boldLabel}>{section.key}</Text></View>
-    
+    return <View style={styles.sectionHeaderView}><Text style={styles.sectionHeader}>{section.key}</Text></View> 
   }
 
   // Render a header?
@@ -126,6 +127,7 @@ export default class ActivitiesScreen extends React.PureComponent {
     return (
       <View style={styles.container}>
         <SectionList
+          horizontal={false}
           numColumns={2}
           renderSectionHeader={this.renderSectionHeader}
           sections={this.state.data}
