@@ -2,11 +2,15 @@ import React from 'react'
 import { View, SectionList, Text } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome'
-
 // More info here: https://facebook.github.io/react-native/docs/sectionlist.html
-
 // Styles
 import styles from './Styles/ActivitiesScreenStyle'
+import activitiesData from '../Fixtures/main.json'
+const awe = activitiesData.filter(x => x.categories.includes('awe'))
+const gratitude = activitiesData.filter(x => x.categories.includes('gratitude'))
+const kindness = activitiesData.filter(x => x.categories.includes('kindness'))
+const mindfulness = activitiesData.filter(x => x.categories.includes('mindfulness'))
+const resilience = activitiesData.filter(x => x.categories.includes('resilience_to_stress'))
 
 export default class ActivitiesScreen extends React.PureComponent {
 
@@ -22,33 +26,29 @@ export default class ActivitiesScreen extends React.PureComponent {
   *************************************************************/
   state = {
     data: [
-      {
-        key: 'Awe',
-        data: [
-          {title: 'First Title', description: 'First Description'},
-          {title: 'Second Title', description: 'Second Description'},
-          {title: 'Third Title', description: 'Third Description'},
-          {title: 'Fourth Title', description: 'Fourth Description'},
-          {title: 'Fifth Title', description: 'Fifth Description'},
-          {title: 'Sixth Title', description: 'Sixth Description'},
-          {title: 'Seventh Title', description: 'Seventh Description'},
-          {title: 'Eighth Title', description: 'Eighth Description'},
-        ]
-      }, {
-        key: 'Gratitude',
-        data: [
-          {title: 'Ninth Title', description: 'Ninth Description'},
-          {title: 'Tenth Title', description: 'Tenth Description'},
-          {title: 'Eleventh Title', description: 'Eleventh Description'},
-          {title: '12th Title', description: '12th Description'},
-          {title: '13th Title', description: '13th Description'},
-          {title: '14th Title', description: '14th Description'},
-          {title: '15th Title', description: '15th Description'},
-          {title: '16th Title', description: '16th Description'},
-        ]
-      }
+    {
+      key: "Awe",
+      data: awe
+    },
+    {
+      key: "Gratitude",
+      data: gratitude
+    },
+    {
+      key: "Kindness",
+      data: kindness
+    },
+    {
+      key: "Mindfulness",
+      data: mindfulness
+    },
+    {
+      key: "Resilience",
+      data: resilience
+    }
     ]
   }
+
 
   /* ***********************************************************
   * STEP 3
@@ -76,6 +76,7 @@ export default class ActivitiesScreen extends React.PureComponent {
   // Conditional branching for section headers, also see step 3
   renderSectionHeader ({section}) {
     return <View style={styles.sectionHeader}><Text style={styles.boldLabel}>{section.key}</Text></View>
+    
   }
 
   /* ***********************************************************

@@ -14,11 +14,11 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     margin: Metrics.baseMargin,
+    padding: Metrics.baseMargin,
     backgroundColor: Colors.nephritis,
     borderRadius: Metrics.smallMargin
   },
   sectionHeader: {
-    fontWeight: 'bold',
     paddingTop: Metrics.doubleBaseMargin,
     width: Metrics.screenWidth,
     alignSelf: 'center',
