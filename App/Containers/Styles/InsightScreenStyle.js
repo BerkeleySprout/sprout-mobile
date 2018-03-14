@@ -5,7 +5,11 @@ export default StyleSheet.create({
   ...ApplicationStyles.screen,
   container: {
     flex: 1,
-    backgroundColor: Colors.background
+    backgroundColor: Colors.background,
+  },
+  timelineContainer: {
+    flex: 1,
+    margin: Metrics.doubleBaseMargin
   },
   bar: {
     backgroundColor: Colors.nephritis,
@@ -17,7 +21,6 @@ export default StyleSheet.create({
     fontFamily: Fonts.type.base,
   },
   timeline: {
-    margin: Metrics.doubleBaseMargin
   },
   buttonGroup: {
     height: 30,

@@ -37,6 +37,10 @@ export default StyleSheet.create({
     alignItems: 'center',
     margin: Metrics.baseMargin,
     borderRadius: Metrics.baseMargin,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 4,
   },
   imageBackground: {
     backgroundColor: Colors.clear,
@@ -48,10 +52,7 @@ export default StyleSheet.create({
     padding: Metrics.baseMargin,
     paddingBottom: Metrics.bigMargin,
     borderRadius: Metrics.baseMargin,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.8,
-    shadowRadius: 4,
+    overflow: 'hidden'
   },
   sectionHeaderView: {
     paddingTop: Metrics.doubleBaseMargin,

@@ -31,18 +31,20 @@ export default class InsightScreen extends Component {
           title={'Insights'}
           onLeftPress={() => console.log('Left!')}
         />
-        <Timeline
-            data={this.data}
-            circleSize={20}
-            circleColor='rgb(45,156,219)'
-            lineColor='rgb(45,156,219)'
-            timeContainerStyle={{minWidth:52, marginTop: -5}}
-            timeStyle={{textAlign: 'center', backgroundColor:'#ff9797', color:'white', padding:5, borderRadius:13}}
-            descriptionStyle={{color:'gray'}}
-            options={{
-              style: styles.timeline
-            }}
-          />
+        <View style={styles.timelineContainer}>
+          <Timeline
+              data={this.data}
+              circleSize={20}
+              circleColor='rgb(45,156,219)'
+              lineColor='rgb(45,156,219)'
+              timeContainerStyle={{minWidth:52}}
+              timeStyle={{textAlign: 'center', backgroundColor:'#ff9797', color:'white', padding:5, borderRadius:13, overflow: 'hidden'}}
+              descriptionStyle={{color:'gray'}}
+              options={{
+                style: styles.timeline
+              }}
+            />
+        </View>
       </View>
     )
   }
