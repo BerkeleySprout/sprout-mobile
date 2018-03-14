@@ -16,6 +16,22 @@ export default StyleSheet.create({
     shadowRadius: 3,
     fontFamily: Fonts.type.base,
   },
+  buttonGroup: {
+    height: 30,
+    marginTop: 15,
+    marginBottom: 13,
+    width: '50%',
+    alignSelf: 'center',
+  },
+  button: {
+    fontSize: Fonts.size.small,
+  },
+  selectedButton: {
+    backgroundColor: Colors.silver,
+  },
+  searchBar: {
+    backgroundColor: Colors.background,
+  },
   sectionHeader: {
     color: Colors.text
   },

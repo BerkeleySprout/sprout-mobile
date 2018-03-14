@@ -1,34 +1,10 @@
 import React from 'react'
-import { View, SectionList, Text, Image } from 'react-native'
+import { View, SectionList, Text, Image, TouchableOpacity, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome'
-import SearchBar from 'react-native-searchbar'
 import ActionBar from 'react-native-action-bar'
+import { Header, SearchBar, List, ListItem, ButtonGroup } from 'react-native-elements'
 import styles from './Styles/CommunityScreenStyle'
-
-const items = [
-    1337,
-    'janeway',
-    {
-      lots: 'of',
-      different: {
-        types: 0,
-        data: false,
-        that: {
-          can: {
-            be: {
-              quite: {
-                complex: {
-                  hidden: [ 'gold!' ],
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-    [ 4, 2, 'tree' ],
-  ];
 
 class CommunityScreen extends React.PureComponent {
   /* ***********************************************************
@@ -36,6 +12,17 @@ class CommunityScreen extends React.PureComponent {
   * This is an array of objects with the properties you desire
   * Usually this should come from Redux mapStateToProps
   *************************************************************/
+  constructor () {
+    super()
+    this.state = {
+      selectedIndex: 2
+    }
+    this.updateIndex = this.updateIndex.bind(this)
+  }
+
+  updateIndex (selectedIndex) {
+    this.setState({selectedIndex})
+  }
 
   static navigationOptions = {
     tabBarLabel: "Community",
@@ -154,6 +141,72 @@ class CommunityScreen extends React.PureComponent {
   // )}
 
   render () {
+    const list = [
+      {
+        name: 'Amy Farha',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        subtitle: 'Vice President'
+      },
+      {
+        name: 'Amy Farha',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        subtitle: 'Vice President'
+      },
+      {
+        name: 'Amy Farha',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        subtitle: 'Vice President'
+      },
+      {
+        name: 'Amy Farha',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        subtitle: 'Vice President'
+      },
+      {
+        name: 'Amy Farha',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        subtitle: 'Vice President'
+      },
+      {
+        name: 'Amy Farha',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        subtitle: 'Vice President'
+      },
+      {
+        name: 'Chris Jackson',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+        subtitle: 'Vice Chairman'
+      },
+      {
+        name: 'Chris Jackson',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+        subtitle: 'Vice Chairman'
+      },
+      {
+        name: 'Chris Jackson',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+        subtitle: 'Vice Chairman'
+      },
+      {
+        name: 'Chris Jackson',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+        subtitle: 'Vice Chairman'
+      },
+      {
+        name: 'Chris Jackson',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+        subtitle: 'Vice Chairman'
+      },
+      {
+        name: 'Chris Jackson',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+        subtitle: 'Vice Chairman'
+      },
+    ]
+
+    const buttons = ['People', 'Groups']
+    const { selectedIndex } = this.state
+
     return (
       <View style={styles.container}>
         <ActionBar
@@ -167,26 +220,34 @@ class CommunityScreen extends React.PureComponent {
               },
           ]}
         />
+        <ButtonGroup
+          buttons={buttons}
+          onPress={this.updateIndex.bind(this)}
+          selectedIndex={selectedIndex}
+          containerStyle={styles.buttonGroup}
+          buttonStyle={styles.button}
+          selectedButtonStyle={styles.selectedButton}
+        />
         <SearchBar
-          style={{marginBottom: 10}}
-          ref={(ref) => this.searchBar = ref}
-          data={items}
-          hideBack={true}
-          iOSHideShadow={false}
-          showOnLoad
-        />
-        <SectionList
-          renderSectionHeader={this.renderSectionHeader}
-          sections={this.state.data}
-          contentContainerStyle={styles.listContent}
-          data={this.state.dataObjects}
-          renderItem={this.renderItem}
-          keyExtractor={this.keyExtractor}
-          initialNumToRender={this.oneScreensWorth}
-          ListHeaderComponent={this.renderHeader}
-          ListEmptyComponent={this.renderEmpty}
-          stickySectionHeadersEnabled={false}
-        />
+          lightTheme
+          containerStyle={styles.searchBar}
+          placeholder='Search for people...' />
+        <ScrollView>
+        <List containerStyle={{marginBottom: 20}}>
+          {
+            list.map((l, i) => (
+              <TouchableOpacity>
+                <ListItem
+                  roundAvatar
+                  avatar={{uri:l.avatar_url}}
+                  key={i}
+                  title={l.name}
+                />
+              </TouchableOpacity>
+            ))
+          }
+        </List>
+        </ScrollView>
       </View>
     )
   }

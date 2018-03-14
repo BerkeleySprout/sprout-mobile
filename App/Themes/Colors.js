@@ -6,7 +6,7 @@ const colors = {
   transparent: 'rgba(0,0,0,0.5)',
   facebook: '#3b5998',
   concrete: '#95A5A6',
-  silver: '#F7F7F7',
+  silver: '#bdc3c7',
   steel: '#CCCCCC',
   error: 'rgba(200, 0, 0, 0.8)',
   ricePaper: 'rgba(255,255,255, 0.75)',
