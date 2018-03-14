@@ -6,7 +6,22 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.background,
-    margin: 17
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  imageContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  bar: {
+    backgroundColor: Colors.nephritis,
+    color: 'black',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.7,
+    shadowRadius: 3,
+    fontFamily: Fonts.type.base,
   },
   row: {
     width: 150,
@@ -21,11 +36,7 @@ export default StyleSheet.create({
     flex: 1,
     position: 'absolute',
     width: '50%',
-    height: '52%',
-    justifyContent: 'flex-end',
-    padding: Metrics.baseMargin,
-    paddingBottom: Metrics.bigMargin,
-    borderRadius: Metrics.baseMargin
+    height: '57.5%',
   },
   sectionHeaderView: {
     paddingTop: Metrics.doubleBaseMargin,
