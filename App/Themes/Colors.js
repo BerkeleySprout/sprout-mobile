@@ -1,7 +1,7 @@
 const colors = {
   background: 'white',
   emerald: '#20bf6b',
-  nephritis: '#27ae60',
+  nephritis: '#48a556',
   clear: 'rgba(0,0,0,0)',
   transparent: 'rgba(0,0,0,0.5)',
   facebook: '#3b5998',

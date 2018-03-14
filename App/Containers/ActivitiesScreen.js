@@ -2,10 +2,10 @@ import React from 'react'
 import { View, SectionList, Text, ImageBackground, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome'
-// More info here: https://facebook.github.io/react-native/docs/sectionlist.html
-// Styles
 import styles from './Styles/ActivitiesScreenStyle'
 import activitiesData from '../Fixtures/main.json'
+import ActionBar from 'react-native-action-bar'
+
 const awe = activitiesData.filter(x => x.categories.includes('awe'))
 const gratitude = activitiesData.filter(x => x.categories.includes('gratitude'))
 const kindness = activitiesData.filter(x => x.categories.includes('kindness'))
@@ -101,11 +101,6 @@ export default class ActivitiesScreen extends React.PureComponent {
     return <View style={styles.sectionHeaderView}><Text style={styles.sectionHeader}>{section.key}</Text></View> 
   }
 
-  renderHeader = () =>
-    <View style={styles.headerView}>
-      <Text style={styles.header}> Wellness Activities </Text>
-    </View>
-
   renderFooter = () =>
     <Text style={[styles.label, styles.sectionHeader]}></Text>
 
@@ -140,10 +135,21 @@ export default class ActivitiesScreen extends React.PureComponent {
   render () {
     return (
       <View style={styles.container}>
+        <ActionBar
+          containerStyle={styles.bar}
+          title={'Wellness Activities'}
+          onLeftPress={() => console.log('Left!')}
+          disableStatusBarHandling={true}
+          rightIcons={[
+              {
+                  name: 'plus',
+                  onPress: () => console.log('Right Plus !'),
+              },
+          ]}
+        />
         <SectionList
           horizontal={false}
           numColumns={2}
-          ListHeaderComponent={this.renderHeader}
           renderSectionHeader={this.renderSectionHeader}
           sections={this.state.data}
           contentContainerStyle={styles.listContent}

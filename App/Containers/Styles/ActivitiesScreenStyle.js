@@ -8,6 +8,14 @@ export default StyleSheet.create({
     backgroundColor: Colors.background,
     margin: 0
   },
+  bar: {
+    backgroundColor: Colors.nephritis,
+    color: 'black',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.7,
+    shadowRadius: 3,
+  },
   headerView: {
     backgroundColor: Colors.emerald,
     justifyContent: 'center',
@@ -18,9 +26,7 @@ export default StyleSheet.create({
   header: {
     color: Colors.background,
     fontSize: Fonts.size.h3,
-    padding: 50,
-    paddingLeft: 100,
-    paddingRight: 100
+    padding: 50
   },
   row: {
     width: 150,
