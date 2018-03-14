@@ -1,6 +1,6 @@
 const colors = {
   background: 'white',
-  emerald: '#2ecc71',
+  emerald: '#20bf6b',
   nephritis: '#27ae60',
   clear: 'rgba(0,0,0,0)',
   transparent: 'rgba(0,0,0,0.5)',

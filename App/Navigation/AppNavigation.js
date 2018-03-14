@@ -35,6 +35,7 @@ MainScreenNavigator.navigationOptions = {
 }
 
 const PrimaryNav = StackNavigator({
+  CommunityScreen: { screen: CommunityScreen },
   ActivitiesScreen: { screen: ActivitiesScreen },
   LaunchScreen: { screen: LaunchScreen }
 }, {

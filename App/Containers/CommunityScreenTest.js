@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import SearchBar from 'react-native-searchbar'
+import styles from './Styles/TreeScreenStyle'
 
-export default class ActivitiesScreen extends Component {
-	
+export default class CommunityScreen extends Component {
+
 	static navigationOptions = {
-    tabBarLabel: "Activities",
-    tabBarIcon: ({ tintColor }) => <Icon name="search" size={20} color={tintColor}/>
+    tabBarLabel: "Community",
+    tabBarIcon: ({ tintColor }) => <Icon name="users" size={20} color={tintColor}/>
   }
 
   render () {
@@ -17,7 +19,7 @@ export default class ActivitiesScreen extends Component {
         alignItems: 'center'
       }}>
         <Text>
-          THIS IS THE ACTIVITIES SCREEN
+          
         </Text>
       </View>
     )

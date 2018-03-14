@@ -97,26 +97,23 @@ export default class ActivitiesScreen extends React.PureComponent {
     )
   }
 
-  // Conditional branching for section headers, also see step 3
   renderSectionHeader ({section}) {
     return <View style={styles.sectionHeaderView}><Text style={styles.sectionHeader}>{section.key}</Text></View> 
   }
 
-  // Render a header?
   renderHeader = () =>
-    <Text style={[styles.label, styles.sectionHeader]}> Wellness Activities </Text>
+    <View style={styles.headerView}>
+      <Text style={styles.header}> Wellness Activities </Text>
+    </View>
 
-  // Render a footer?
   renderFooter = () =>
     <Text style={[styles.label, styles.sectionHeader]}></Text>
 
-  // Show this when data is empty
   renderEmpty = () =>
     <Text style={styles.label}> - Nothing to See Here - </Text>
 
   renderSeparator = () =>
     <Text style={styles.label}></Text>
-
 
   // The default function if no Key is provided is index
   // an identifiable key is important if you plan on
@@ -146,6 +143,7 @@ export default class ActivitiesScreen extends React.PureComponent {
         <SectionList
           horizontal={false}
           numColumns={2}
+          ListHeaderComponent={this.renderHeader}
           renderSectionHeader={this.renderSectionHeader}
           sections={this.state.data}
           contentContainerStyle={styles.listContent}

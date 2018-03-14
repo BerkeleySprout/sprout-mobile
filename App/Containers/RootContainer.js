@@ -17,9 +17,12 @@ class RootContainer extends Component {
   }
 
   render () {
+    console.disableYellowBox = true
     return (
       <View style={styles.applicationView}>
-        <StatusBar barStyle='light-content' />
+        <StatusBar 
+          barStyle='default'
+        />
         <ReduxNavigation />
       </View>
     )

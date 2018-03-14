@@ -6,7 +6,21 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.background,
-    margin: 17
+    margin: 0
+  },
+  headerView: {
+    backgroundColor: Colors.emerald,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderBottomWidth: 10,
+    borderBottomColor: '#ddd',
+  },
+  header: {
+    color: Colors.background,
+    fontSize: Fonts.size.h3,
+    padding: 50,
+    paddingLeft: 100,
+    paddingRight: 100
   },
   row: {
     width: 150,
