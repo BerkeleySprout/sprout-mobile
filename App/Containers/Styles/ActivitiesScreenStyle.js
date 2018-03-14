@@ -52,13 +52,15 @@ export default StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     marginBottom: Metrics.baseMargin,
-    fontSize: Fonts.size.medium
+    fontSize: Fonts.size.medium,
+    zIndex: 3
   },
   label: {
     alignSelf: 'center',
     color: Colors.textSecondary,
     textAlign: 'center',
-    fontSize: Fonts.size.small
+    fontSize: Fonts.size.small,
+    zIndex: 3
   },
   overlay: {
     position: 'absolute',

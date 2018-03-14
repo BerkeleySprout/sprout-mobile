@@ -65,6 +65,9 @@ export default class ActivitiesScreen extends React.PureComponent {
   * Note: You can remove section/separator functions and jam them in here
   *************************************************************/
   renderItem ({section, item}) {
+    const gradientHeight = 100
+    const gradientBackground = 'black'
+    const data = Array.from({ length: gradientHeight })
     return (
       <TouchableOpacity style={styles.row}>
         <ImageBackground
@@ -72,7 +75,21 @@ export default class ActivitiesScreen extends React.PureComponent {
         resizeMode={'cover'}
         source={{ uri: item.img }}
         >
-          <View style={styles.overlay}/>
+          {data.map((_, i) => (
+            <View
+              key={i}
+              style={{
+                position: 'absolute',
+                backgroundColor: gradientBackground,
+                height: 1,
+                bottom: (gradientHeight - i - 5),
+                right: 0,
+                left: 0,
+                zIndex: 2,
+                opacity: (1 / gradientHeight) * (i + 1)
+              }}
+            />
+          ))}
           <Text style={styles.boldLabel}>{item.title}</Text>
           <Text style={styles.label}>{item.description}</Text>
         </ImageBackground>
