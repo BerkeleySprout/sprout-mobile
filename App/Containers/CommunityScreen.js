@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { ScrollView, Text, Image, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import SearchBar from 'react-native-searchbar'
+import styles from './Styles/TreeScreenStyle'
 
 export default class CommunityScreen extends Component {
 

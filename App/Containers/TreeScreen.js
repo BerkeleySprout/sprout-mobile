@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import { ScrollView, Text, Image, View, ImageBackground } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
+import styles from './Styles/TreeScreenStyle'
 
 export default class TreeScreen extends Component {
 
@@ -16,9 +17,12 @@ export default class TreeScreen extends Component {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <Text>
-          THIS IS THE TREE SCREEN
-        </Text>
+        <Image
+        style={styles.imageBackground}
+        resizeMode={'cover'}
+        source={ require('../Images/sprout-tree.png') }>
+
+        </Image>
       </View>
     )
   }
