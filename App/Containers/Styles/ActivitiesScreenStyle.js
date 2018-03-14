@@ -15,6 +15,7 @@ export default StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.7,
     shadowRadius: 3,
+    fontFamily: Fonts.type.base,
   },
   headerView: {
     backgroundColor: Colors.emerald,
@@ -25,6 +26,7 @@ export default StyleSheet.create({
   },
   header: {
     color: Colors.background,
+    fontFamily: Fonts.type.base,
     fontSize: Fonts.size.h3,
     padding: 50
   },
@@ -64,7 +66,9 @@ export default StyleSheet.create({
     color: Colors.text,
     textAlign: 'center',
     marginBottom: Metrics.smallMargin,
-    fontSize: Fonts.size.h6
+    fontSize: Fonts.size.h6,
+    fontFamily: Fonts.type.bold,
+    textDecorationLine: 'underline'
   },
   boldLabel: {
     fontWeight: 'bold',
@@ -73,6 +77,7 @@ export default StyleSheet.create({
     textAlign: 'center',
     marginBottom: Metrics.baseMargin,
     fontSize: Fonts.size.medium,
+    fontFamily: Fonts.type.base,
     zIndex: 3
   },
   label: {
@@ -80,6 +85,7 @@ export default StyleSheet.create({
     color: Colors.textSecondary,
     textAlign: 'center',
     fontSize: Fonts.size.small,
+    fontFamily: Fonts.type.base,
     zIndex: 3
   },
   overlay: {

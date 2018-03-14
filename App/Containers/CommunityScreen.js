@@ -3,6 +3,7 @@ import { View, SectionList, Text, Image } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import SearchBar from 'react-native-searchbar'
+import ActionBar from 'react-native-action-bar'
 import styles from './Styles/CommunityScreenStyle'
 
 const items = [
@@ -120,23 +121,9 @@ class CommunityScreen extends React.PureComponent {
   renderHeader = () =>
     <Text style={[styles.label, styles.sectionHeader]}> - Full List Header - </Text>
 
-  // Render a footer?
-  renderFooter = () =>
-    <Text style={[styles.label, styles.sectionHeader]}> - Full List Footer - </Text>
-
-  // Does each section need a footer?
-  renderSectionFooter = () =>
-    <Text style={styles.label}> END SECTION!!!! </Text>
-
   // Show this when data is empty
   renderEmpty = () =>
     <Text style={styles.label}> - Nothing to See Here - </Text>
-
-  renderSeparator = () =>
-    <Text style={styles.label}> - ~~~~~ - </Text>
-
-  renderSectionSeparator = () =>
-    <Text style={styles.label}> \/\/\/\/\/\/\/\/ </Text>
 
   // The default function if no Key is provided is index
   // an identifiable key is important if you plan on
@@ -169,6 +156,17 @@ class CommunityScreen extends React.PureComponent {
   render () {
     return (
       <View style={styles.container}>
+        <ActionBar
+          containerStyle={styles.bar}
+          title={'Your Wellness Community'}
+          onLeftPress={() => console.log('Left!')}
+          rightIcons={[
+              {
+                  name: 'plus',
+                  onPress: () => console.log('Right Plus !'),
+              },
+          ]}
+        />
         <SearchBar
           style={{marginBottom: 10}}
           ref={(ref) => this.searchBar = ref}
@@ -186,10 +184,7 @@ class CommunityScreen extends React.PureComponent {
           keyExtractor={this.keyExtractor}
           initialNumToRender={this.oneScreensWorth}
           ListHeaderComponent={this.renderHeader}
-          SectionSeparatorComponent={this.renderSectionSeparator}
-          ListFooterComponent={this.renderFooter}
           ListEmptyComponent={this.renderEmpty}
-          renderSectionFooter={this.renderSectionFooter}
           stickySectionHeadersEnabled={false}
         />
       </View>

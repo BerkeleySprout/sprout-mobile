@@ -101,9 +101,6 @@ export default class ActivitiesScreen extends React.PureComponent {
     return <View style={styles.sectionHeaderView}><Text style={styles.sectionHeader}>{section.key}</Text></View> 
   }
 
-  renderFooter = () =>
-    <Text style={[styles.label, styles.sectionHeader]}></Text>
-
   renderEmpty = () =>
     <Text style={styles.label}> - Nothing to See Here - </Text>
 
@@ -139,7 +136,6 @@ export default class ActivitiesScreen extends React.PureComponent {
           containerStyle={styles.bar}
           title={'Wellness Activities'}
           onLeftPress={() => console.log('Left!')}
-          disableStatusBarHandling={true}
           rightIcons={[
               {
                   name: 'plus',
