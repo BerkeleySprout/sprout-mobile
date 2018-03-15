@@ -22,6 +22,7 @@ export default StyleSheet.create({
     marginBottom: 13,
     width: '50%',
     alignSelf: 'center',
+    fontFamily: Fonts.type.base
   },
   button: {
     fontSize: Fonts.size.small,
@@ -31,6 +32,7 @@ export default StyleSheet.create({
   },
   searchBar: {
     backgroundColor: Colors.background,
+    fontFamily: Fonts.type.base,
   },
   sectionHeader: {
     color: Colors.text
@@ -47,13 +49,15 @@ export default StyleSheet.create({
     alignSelf: 'center',
     color: Colors.snow,
     textAlign: 'center',
-    marginBottom: Metrics.smallMargin
+    marginBottom: Metrics.smallMargin,
+    fontFamily: Fonts.type.base,
   },
   label: {
     textAlign: 'center',
-    color: 'black'
+    color: 'black',
+    fontFamily: Fonts.type.base,
   },
   listContent: {
-    marginTop: Metrics.baseMargin
+    marginTop: Metrics.baseMargin,
   }
 })

@@ -2,6 +2,8 @@ const colors = {
   background: 'white',
   emerald: '#20bf6b',
   nephritis: '#48a556',
+  green: '#157f1f',
+  green2: '#78C091',
   clear: 'rgba(0,0,0,0)',
   transparent: 'rgba(0,0,0,0.5)',
   facebook: '#3b5998',

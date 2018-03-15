@@ -11,6 +11,9 @@ export default StyleSheet.create({
     flex: 1,
     margin: Metrics.doubleBaseMargin
   },
+  timeline: {
+    padding: Metrics.smallMargin,
+  },
   bar: {
     backgroundColor: Colors.nephritis,
     color: 'black',

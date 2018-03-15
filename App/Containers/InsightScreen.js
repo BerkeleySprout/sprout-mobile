@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import Timeline from 'react-native-timeline-listview'
 import ActionBar from 'react-native-action-bar'
 import styles from './Styles/InsightScreenStyle'
+import Colors from '../Themes/Colors'
 
 export default class InsightScreen extends Component {
 
@@ -33,17 +34,18 @@ export default class InsightScreen extends Component {
         />
         <View style={styles.timelineContainer}>
           <Timeline
-              data={this.data}
-              circleSize={20}
-              circleColor='rgb(45,156,219)'
-              lineColor='rgb(45,156,219)'
-              timeContainerStyle={{minWidth:52}}
-              timeStyle={{textAlign: 'center', backgroundColor:'#ff9797', color:'white', padding:5, borderRadius:13, overflow: 'hidden'}}
-              descriptionStyle={{color:'gray'}}
-              options={{
-                style: styles.timeline
-              }}
-            />
+            data={this.data}
+            circleSize={20}
+            circleColor={Colors.green2}
+            innerCircle={'dot'}
+            lineColor={Colors.cloud}
+            timeStyle={{textAlign: 'center', backgroundColor: Colors.green2, color:'white', padding:5, borderRadius:13, overflow: 'hidden'}}
+            descriptionStyle={{color:'gray'}}
+            options={{
+              style: styles.timeline,
+              removeClippedSubviews: false
+            }}
+          />
         </View>
       </View>
     )
