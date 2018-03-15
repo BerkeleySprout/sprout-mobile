@@ -27,12 +27,14 @@ var MainScreenNavigator = TabNavigator({
   {
     tabBarOptions: {
       activeTintColor: Colors.nephritis,
-    }
+      tabBarHideShadow: true,
+      tabBarTextFontFamily: 'Avenir-Black',
+    }, 
   }
 );
 
 MainScreenNavigator.navigationOptions = {
-  title: "Navigation Tab"
+  title: "Tabs"
 }
 
 const PrimaryNav = StackNavigator({
@@ -41,7 +43,7 @@ const PrimaryNav = StackNavigator({
 }, {
   // Default config for all screens
   headerMode: 'none',
-  initialRouteName: 'Tabs',
+  initialRouteName: 'LoginScreen',
   navigationOptions: {
     headerStyle: styles.header
   }

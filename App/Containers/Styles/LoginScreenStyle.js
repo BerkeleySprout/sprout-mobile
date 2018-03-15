@@ -1,19 +1,59 @@
 import { StyleSheet } from 'react-native'
-import { Colors, Metrics } from '../../Themes'
+import { Colors, Metrics, Fonts } from '../../Themes'
 
 export default StyleSheet.create({
   container: {
     paddingTop: 70,
-    backgroundColor: Colors.background
+    backgroundColor: Colors.background,
+    flex: 1,
+  },
+  imageContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center'
   },
   logo: {
-    width: '23%',
-    height: '10%'
+    width: '21%',
+    height: '10%',
+    alignSelf: 'center',
+    marginBottom: Metrics.doubleSection,
   },
   form: {
     backgroundColor: Colors.snow,
     margin: Metrics.baseMargin,
     borderRadius: 4
+  },
+  fullWidthButton: {
+    backgroundColor: Colors.nephritis,
+    margin: Metrics.doubleBaseMargin,
+    height:40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 1, height: 2 },
+    shadowOpacity: 0.7,
+    shadowRadius: 1,
+  },
+  button: {
+    backgroundColor: Colors.nephritis,
+    margin: Metrics.doubleBaseMargin,
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 1, height: 2 },
+    shadowOpacity: 0.7,
+    shadowRadius: 1,
+  },
+  buttonText: {
+    fontFamily: Fonts.type.bold,
+  },
+  socialButton: {
+    padding: Metrics.doubleBaseMargin,
+    shadowColor: '#000',
+    shadowOffset: { width: 1, height: 2 },
+    shadowOpacity: 0.7,
+    shadowRadius: 1,
   },
   row: {
     paddingVertical: Metrics.doubleBaseMargin,
@@ -25,8 +65,13 @@ export default StyleSheet.create({
     color: Colors.charcoal
   },
   textInput: {
-    height: 40,
-    color: Colors.coal
+    height: 50, 
+    borderColor: 'gray', 
+    borderWidth: 1, 
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 5,
+    marginBottom: 20,
   },
   textInputReadonly: {
     height: 40,

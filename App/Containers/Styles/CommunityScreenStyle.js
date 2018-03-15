@@ -18,11 +18,11 @@ export default StyleSheet.create({
   },
   buttonGroup: {
     height: 30,
-    marginTop: 15,
-    marginBottom: 13,
+    marginTop: 10,
     width: '50%',
     alignSelf: 'center',
-    fontFamily: Fonts.type.base
+    fontFamily: Fonts.type.base,
+    borderRadius: 20
   },
   button: {
     fontSize: Fonts.size.small,
@@ -31,7 +31,6 @@ export default StyleSheet.create({
     backgroundColor: Colors.silver,
   },
   searchBar: {
-    backgroundColor: Colors.background,
     fontFamily: Fonts.type.base,
   },
   sectionHeader: {

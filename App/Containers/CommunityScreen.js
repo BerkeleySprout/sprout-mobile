@@ -220,6 +220,11 @@ class CommunityScreen extends React.PureComponent {
               },
           ]}
         />
+        <SearchBar
+          round
+          lightTheme
+          containerStyle={styles.searchBar}
+          placeholder='Search for people...' />
         <ButtonGroup
           buttons={buttons}
           onPress={this.updateIndex.bind(this)}
@@ -228,10 +233,6 @@ class CommunityScreen extends React.PureComponent {
           buttonStyle={styles.button}
           selectedButtonStyle={styles.selectedButton}
         />
-        <SearchBar
-          lightTheme
-          containerStyle={styles.searchBar}
-          placeholder='Search for people...' />
         <ScrollView>
         <List containerStyle={{marginBottom: 20}}>
           {
