@@ -29,13 +29,16 @@ export default class LoginScreen extends Component {
     return (
       <View style={styles.container}>
         
-          <Image
-            style={styles.logo}
-            source={ Images.logo }>
-          </Image>
+        <Image
+          style={styles.logo}
+          source={ Images.logo }>
+        </Image>
         
+        <Text style={styles.title}>
+        Sign In
+        </Text>
 
-        <Text style={{marginLeft: 20}}>
+        <Text style={styles.rowLabel}>
         Email
         </Text>
         <TextInput
@@ -45,7 +48,7 @@ export default class LoginScreen extends Component {
           value={this.state.email}
         />
 
-        <Text style={{marginLeft: 20}}>
+        <Text style={styles.rowLabel}>
         Password
         </Text>
         <TextInput
@@ -58,18 +61,18 @@ export default class LoginScreen extends Component {
 
         <Button
           onPress={this.onPressSignIn.bind(this)}
-          title="Login"
+          title="Sign In"
           color={Colors.snow}
           buttonStyle={styles.button}
           textStyle={styles.buttonText}
         />
 
-        <SocialIcon
-          title='Login With Facebook'
-          button
-          type='facebook'
-          style={styles.socialButton}
-          fontStyle={styles.buttonText}
+        <Button
+          onPress={this.onPressSignIn.bind(this)}
+          title="Sign In with Facebook"
+          color={Colors.snow}
+          buttonStyle={styles.buttonFB}
+          textStyle={styles.buttonText}
         />
       </View>
     )

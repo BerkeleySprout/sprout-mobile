@@ -18,6 +18,12 @@ export default StyleSheet.create({
     alignSelf: 'center',
     marginBottom: Metrics.doubleSection,
   },
+  title: {
+    alignSelf: 'center',
+    fontFamily: Fonts.type.base,
+    fontSize: Fonts.size.h4,
+    margin: Metrics.doubleBaseMargin,
+  },
   form: {
     backgroundColor: Colors.snow,
     margin: Metrics.baseMargin,
@@ -38,7 +44,16 @@ export default StyleSheet.create({
   },
   button: {
     backgroundColor: Colors.nephritis,
-    margin: Metrics.doubleBaseMargin,
+    margin: Metrics.bigMargin,
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 1, height: 2 },
+    shadowOpacity: 0.7,
+    shadowRadius: 1,
+  },
+  buttonFB: {
+    backgroundColor: Colors.facebook,
+    margin: Metrics.bigMargin,
     borderRadius: 20,
     shadowColor: '#000',
     shadowOffset: { width: 1, height: 2 },
@@ -62,16 +77,18 @@ export default StyleSheet.create({
     flex: 1
   },
   rowLabel: {
-    color: Colors.charcoal
+    marginLeft: Metrics.doubleBaseMargin,
+
   },
   textInput: {
     height: 50, 
     borderColor: 'gray', 
-    borderWidth: 1, 
+    borderWidth: 0.5, 
     marginLeft: 20,
     marginRight: 20,
     marginTop: 5,
-    marginBottom: 20,
+    marginBottom: 15,
+    borderRadius: 2,
   },
   textInputReadonly: {
     height: 40,
