@@ -16,7 +16,7 @@ export default StyleSheet.create({
     width: '21%',
     height: '10%',
     alignSelf: 'center',
-    marginBottom: Metrics.doubleSection,
+    marginBottom: Metrics.doubleBaseMargin,
   },
   title: {
     alignSelf: 'center',
@@ -32,7 +32,7 @@ export default StyleSheet.create({
   fullWidthButton: {
     backgroundColor: Colors.nephritis,
     margin: Metrics.doubleBaseMargin,
-    height:40,
+    height: 40,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -45,30 +45,27 @@ export default StyleSheet.create({
   button: {
     backgroundColor: Colors.nephritis,
     margin: Metrics.bigMargin,
-    borderRadius: 20,
+    marginLeft: 45,
+    marginRight: 45,
+    borderRadius: 5,
     shadowColor: '#000',
-    shadowOffset: { width: 1, height: 2 },
+    shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.7,
     shadowRadius: 1,
   },
   buttonFB: {
     backgroundColor: Colors.facebook,
     margin: Metrics.bigMargin,
-    borderRadius: 20,
+    marginLeft: 45,
+    marginRight: 45,
+    borderRadius: 5,
     shadowColor: '#000',
-    shadowOffset: { width: 1, height: 2 },
+    shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.7,
     shadowRadius: 1,
   },
   buttonText: {
     fontFamily: Fonts.type.bold,
-  },
-  socialButton: {
-    padding: Metrics.doubleBaseMargin,
-    shadowColor: '#000',
-    shadowOffset: { width: 1, height: 2 },
-    shadowOpacity: 0.7,
-    shadowRadius: 1,
   },
   row: {
     paddingVertical: Metrics.doubleBaseMargin,
@@ -77,15 +74,15 @@ export default StyleSheet.create({
     flex: 1
   },
   rowLabel: {
-    marginLeft: Metrics.doubleBaseMargin,
-
+    marginLeft: 60,
+    fontFamily: Fonts.type.base,
   },
   textInput: {
     height: 50, 
     borderColor: 'gray', 
     borderWidth: 0.5, 
-    marginLeft: 20,
-    marginRight: 20,
+    marginLeft: 60,
+    marginRight: 60,
     marginTop: 5,
     marginBottom: 15,
     borderRadius: 2,
