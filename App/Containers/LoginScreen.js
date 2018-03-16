@@ -22,7 +22,7 @@ export default class LoginScreen extends Component {
   }
 
   onPressSignIn() {
-    console.log(1)
+    this.props.navigation.navigate('Tabs')
   }
 
   render () {
