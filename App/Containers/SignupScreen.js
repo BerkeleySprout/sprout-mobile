@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ScrollView, Text, TextInput, Image, View, ImageBackground, TouchableOpacity, TouchableHighlight } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { Button, SocialIcon } from 'react-native-elements'
-import styles from "./Styles/LoginScreenStyle";
+import styles from "./Styles/SignupScreenStyle";
 import { Images, Metrics, Colors } from "../Themes"
 
 export default class LoginScreen extends Component {
@@ -16,15 +16,15 @@ export default class LoginScreen extends Component {
   }
 
   static navigationOptions = {
-    title: 'Login',
+    title: 'Signup',
   }
 
   onPressSignIn() {
-    this.props.navigation.navigate('Tabs')
+    this.props.navigation.navigate('Login')
   }
 
   onPressSignUp() {
-    this.props.navigation.navigate('Signup')
+    this.props.navigation.navigate('Tabs')
   }
 
   render () {

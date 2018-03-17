@@ -1,6 +1,7 @@
 import { StackNavigator, TabNavigator } from 'react-navigation'
 import LaunchScreen from '../Containers/LaunchScreen'
 import LoginScreen from '../Containers/LoginScreen'
+import SignupScreen from '../Containers/SignupScreen'
 import TreeScreen from '../Containers/TreeScreen'
 import ActivitiesScreen from '../Containers/ActivitiesScreen'
 import InsightScreen from '../Containers/InsightScreen'
@@ -37,8 +38,9 @@ MainScreenNavigator.navigationOptions = {
   title: "Tabs"
 }
 
-const PrimaryNav = StackNavigator({
+const AppStack = StackNavigator({
   LoginScreen: { screen: LoginScreen },
+  SignupScreen: { screen: SignupScreen },
   Tabs: { screen: MainScreenNavigator }
 }, {
   // Default config for all screens
@@ -49,4 +51,4 @@ const PrimaryNav = StackNavigator({
   }
 })
 
-export default PrimaryNav
+export default AppStack

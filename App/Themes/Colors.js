@@ -1,5 +1,6 @@
 const colors = {
   background: 'white',
+  greyBlue: '#47525D',
   emerald: '#20bf6b',
   nephritis: '#48a556',
   green: '#157f1f',
