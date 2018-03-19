@@ -39,13 +39,28 @@ MainScreenNavigator.navigationOptions = {
 }
 
 const AppStack = StackNavigator({
-  LoginScreen: { screen: LoginScreen },
-  SignupScreen: { screen: SignupScreen },
-  Tabs: { screen: MainScreenNavigator }
+  LoginScreen: { 
+    screen: LoginScreen,
+    navigationOptions: {
+      title: "Login"
+    } 
+  },
+  SignupScreen: { 
+    screen: SignupScreen,
+    navigationOptions: {
+      title: "Signup"
+    }  
+  },
+  Tabs: { 
+    screen: MainScreenNavigator,
+    navigationOptions: {
+      title: "Tabs"
+    }  
+  }
 }, {
   // Default config for all screens
   headerMode: 'none',
-  initialRouteName: 'LoginScreen',
+  initialRouteName: 'SignupScreen',
   navigationOptions: {
     headerStyle: styles.header
   }

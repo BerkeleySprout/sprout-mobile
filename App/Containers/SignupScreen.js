@@ -5,26 +5,23 @@ import { Button, SocialIcon } from 'react-native-elements'
 import styles from "./Styles/SignupScreenStyle";
 import { Images, Metrics, Colors } from "../Themes"
 
-export default class LoginScreen extends Component {
+export default class SignupScreen extends Component {
 
   constructor(props) {
     super(props);
     this.state = { 
       email: '',
-      password: '' 
+      password: '',
+      fullname: ''
     };
   }
 
-  static navigationOptions = {
-    title: 'Signup',
-  }
-
-  onPressSignIn() {
-    this.props.navigation.navigate('Login')
-  }
-
-  onPressSignUp() {
+  onPressCreate() {
     this.props.navigation.navigate('Tabs')
+  }
+
+  onPressLogin() {
+    this.props.navigation.navigate('Login')
   }
 
   render () {
@@ -39,6 +36,16 @@ export default class LoginScreen extends Component {
         <Text style={styles.title}>
         Sign In
         </Text>
+
+        <Text style={styles.rowLabel}>
+        Full Name
+        </Text>
+        <TextInput
+          style={styles.textInput}
+          onChangeText={(fullname) => this.setState({fullname})}
+          editable = {true}
+          value={this.state.fullname}
+        />
 
         <Text style={styles.rowLabel}>
         Email
@@ -61,28 +68,16 @@ export default class LoginScreen extends Component {
         />
 
         <Button
-          onPress={this.onPressSignIn.bind(this)}
-          title="Sign In"
+          onPress={this.onPressCreate.bind(this)}
+          title="Create Account"
           color={Colors.snow}
           buttonStyle={styles.button}
           textStyle={styles.buttonText}
         />
 
-        <Button
-          onPress={this.onPressSignIn.bind(this)}
-          title="Sign In with Facebook"
-          color={Colors.snow}
-          buttonStyle={styles.buttonFB}
-          textStyle={styles.buttonText}
-        />
-
-        <Text style={styles.forgot}>
-        Forgot password?
-        </Text>
-
         <Text style={styles.signUpAction}>
-        Don't have an account? <Text onPress={this.onPressSignUp.bind(this)} 
-                                     style={{textDecorationLine: 'underline'}}>Sign up!</Text>
+        Already have an account? <Text onPress={this.onPressLogin.bind(this)} 
+                                     style={{textDecorationLine: 'underline'}}>Log in!</Text>
         </Text>
       </View>
     )

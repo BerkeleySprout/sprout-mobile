@@ -15,10 +15,6 @@ export default class LoginScreen extends Component {
     };
   }
 
-  static navigationOptions = {
-    title: 'Login',
-  }
-
   onPressSignIn() {
     this.props.navigation.navigate('Tabs')
   }
