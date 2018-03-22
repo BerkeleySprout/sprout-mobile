@@ -39,18 +39,7 @@ MainScreenNavigator.navigationOptions = {
   title: "Tabs"
 }
 
-var switchNav = SwitchNavigator(
-  {
-    AuthLoading: AuthLoadingScreen,
-    App: AppStack,
-    Auth: AuthStack,
-  },
-  {
-    initialRouteName: 'AuthLoading',
-  }
-);
-
-const AuthStack = StackNavigator({
+var AuthStack = StackNavigator({
   LoginScreen: { 
     screen: LoginScreen,
     navigationOptions: {
@@ -63,9 +52,16 @@ const AuthStack = StackNavigator({
       title: "Signup"
     }  
   },
+}, {
+  // Default config for all screens
+  headerMode: 'none',
+  initialRouteName: 'SignupScreen',
+  navigationOptions: {
+    headerStyle: styles.header
+  }
 })
 
-const AppStack = StackNavigator({
+var AppStack = StackNavigator({
   LoginScreen: { 
     screen: LoginScreen,
     navigationOptions: {
