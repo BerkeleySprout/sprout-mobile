@@ -9,13 +9,19 @@ export default StyleSheet.create({
     margin: 0
   },
   bar: {
-    backgroundColor: Colors.nephritis,
+    backgroundColor: Colors.background,
     color: 'black',
-    shadowColor: '#000',
+    shadowColor: Colors.shadow,
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.7,
     shadowRadius: 3,
     fontFamily: Fonts.type.base,
+  },
+  barText: {
+    color: Colors.text,
+    fontSize: Fonts.size.h5,
+    fontFamily: Fonts.type.base,
+    alignSelf: 'center',
   },
   headerView: {
     backgroundColor: Colors.emerald,
@@ -37,10 +43,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     margin: Metrics.baseMargin,
     borderRadius: Metrics.baseMargin,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
   },
   imageBackground: {
     backgroundColor: Colors.clear,

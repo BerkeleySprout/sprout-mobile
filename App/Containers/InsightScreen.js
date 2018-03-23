@@ -30,6 +30,8 @@ export default class InsightScreen extends Component {
         <ActionBar
           containerStyle={styles.bar}
           title={'Insights'}
+          titleStyle={styles.barText}
+          titleContainerStyle={styles.barTextContainer}
           onLeftPress={() => console.log('Left!')}
         />
         <View style={styles.timelineContainer}>

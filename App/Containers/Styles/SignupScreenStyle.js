@@ -71,7 +71,7 @@ export default StyleSheet.create({
     marginLeft: 60,
     marginRight: 60,
     marginTop: 5,
-    marginBottom: 20,
+    marginBottom: 15,
     borderRadius: 2,
   },
   forgot: {

@@ -17,13 +17,9 @@ export default class TreeScreen extends Component {
         <ActionBar
           containerStyle={styles.bar}
           title={'Your Tree'}
+          titleStyle={styles.barText}
+          titleContainerStyle={styles.barTextContainer}
           onLeftPress={() => console.log('Left!')}
-          rightIcons={[
-              {
-                  name: 'menu',
-                  onPress: () => console.log('Right Plus !'),
-              },
-          ]}
         />
         <View style={styles.imageContainer}>
           <Image

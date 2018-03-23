@@ -211,14 +211,10 @@ class CommunityScreen extends React.PureComponent {
       <View style={styles.container}>
         <ActionBar
           containerStyle={styles.bar}
-          title={'Your Wellness Community'}
+          title={'Community'}
+          titleStyle={styles.barText}
+          titleContainerStyle={styles.barTextContainer}
           onLeftPress={() => console.log('Left!')}
-          rightIcons={[
-              {
-                  name: 'plus',
-                  onPress: () => console.log('Right Plus !'),
-              },
-          ]}
         />
         <SearchBar
           round

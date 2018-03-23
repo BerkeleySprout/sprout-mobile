@@ -134,14 +134,10 @@ export default class ActivitiesScreen extends React.PureComponent {
       <View style={styles.container}>
         <ActionBar
           containerStyle={styles.bar}
-          title={'Wellness Activities'}
+          title={'Activities'}
+          titleStyle={styles.barText}
+          titleContainerStyle={styles.barTextContainer}
           onLeftPress={() => console.log('Left!')}
-          rightIcons={[
-              {
-                  name: 'plus',
-                  onPress: () => console.log('Right Plus !'),
-              },
-          ]}
         />
         <SectionList
           horizontal={false}

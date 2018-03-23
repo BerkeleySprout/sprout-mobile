@@ -15,13 +15,18 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   bar: {
-    backgroundColor: Colors.nephritis,
+    backgroundColor: Colors.background,
     color: 'black',
-    shadowColor: '#000',
+    shadowColor: Colors.shadow,
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.7,
     shadowRadius: 3,
+  },
+  barText: {
+    color: Colors.text,
+    fontSize: Fonts.size.h5,
     fontFamily: Fonts.type.base,
+    alignSelf: 'center',
   },
   row: {
     width: 150,
