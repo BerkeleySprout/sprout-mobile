@@ -15,7 +15,7 @@ export default StyleSheet.create({
     padding: Metrics.smallMargin,
   },
   bar: {
-    backgroundColor: Colors.background,
+    backgroundColor: Colors.nephritis,
     color: 'black',
     shadowColor: Colors.shadow,
     shadowOffset: { width: 0, height: 1 },
@@ -24,7 +24,7 @@ export default StyleSheet.create({
     fontFamily: Fonts.type.base,
   },
   barText: {
-    color: Colors.text,
+    color: Colors.textLight,
     fontSize: Fonts.size.h5,
     fontFamily: Fonts.type.base,
     alignSelf: 'center',

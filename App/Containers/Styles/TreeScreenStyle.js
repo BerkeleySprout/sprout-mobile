@@ -15,7 +15,7 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   bar: {
-    backgroundColor: Colors.background,
+    backgroundColor: Colors.nephritis,
     color: 'black',
     shadowColor: Colors.shadow,
     shadowOffset: { width: 0, height: 1 },
@@ -23,7 +23,7 @@ export default StyleSheet.create({
     shadowRadius: 3,
   },
   barText: {
-    color: Colors.text,
+    color: Colors.textLight,
     fontSize: Fonts.size.h5,
     fontFamily: Fonts.type.base,
     alignSelf: 'center',
