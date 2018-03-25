@@ -30,7 +30,8 @@ var MainScreenNavigator = TabNavigator({
     tabBarOptions: {
       activeTintColor: Colors.nephritis,
       tabBarHideShadow: true,
-      tabBarTextFontFamily: 'Avenir-Black',
+      labelStyle: styles.tabLabel,
+      showLabel: false,
     }, 
   }
 );

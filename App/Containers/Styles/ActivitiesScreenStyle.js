@@ -43,6 +43,10 @@ export default StyleSheet.create({
     alignItems: 'center',
     margin: Metrics.baseMargin,
     borderRadius: Metrics.baseMargin,
+    shadowColor: Colors.shadow,
+    shadowOffset: { width: 1, height: 2 },
+    shadowOpacity: 0.7,
+    shadowRadius: 3,
   },
   imageBackground: {
     backgroundColor: Colors.clear,

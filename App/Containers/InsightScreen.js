@@ -21,7 +21,7 @@ export default class InsightScreen extends Component {
 	
 	static navigationOptions = {
     tabBarLabel: "Insight",
-    tabBarIcon: ({ tintColor }) => <Icon name="line-chart" size={20} color={tintColor}/>
+    tabBarIcon: ({ tintColor }) => <Icon name="calendar" size={20} color={tintColor}/>
   }
 
   render () {

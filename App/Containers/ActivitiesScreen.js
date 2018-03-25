@@ -16,7 +16,7 @@ export default class ActivitiesScreen extends React.PureComponent {
 
   static navigationOptions = {
     tabBarLabel: "Activities",
-    tabBarIcon: ({ tintColor }) => <Icon name="search" size={20} color={tintColor}/>
+    tabBarIcon: ({ tintColor }) => <Icon name="heart" size={20} color={tintColor}/>
   }
 
   /* ***********************************************************
