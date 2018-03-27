@@ -37,6 +37,7 @@
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* SproutMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SproutMobileTests.m */; };
 		476F229614A04789A0F740C7 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1371313C6C604468AE54D6C9 /* EvilIcons.ttf */; };
+		4C3E6C0ADA06F15AC15240B7 /* libPods-SproutMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A7C0D581C931AD0E17C799 /* libPods-SproutMobile.a */; };
 		53B46B2F03F74B3487BF0E4F /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 289CEFA981E445FFBF0FA843 /* Entypo.ttf */; };
 		55661068EF064769B06F649D /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE15E6ED1BE74298BA8748AB /* MaterialIcons.ttf */; };
 		5618FCAEE9BF4A5EB2235A42 /* libjschelpers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C505BDA8FFC464BB27C6A9B /* libjschelpers.a */; };
@@ -47,9 +48,11 @@
 		7C6D96FF2ECA44019E39136E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77140D57A0CD4D70903072EA /* Zocial.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		9442C26420484AB3942E4B41 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 929E4FEC002E4738A1999DEF /* Octicons.ttf */; };
+		94630460835AF20986025FDE /* libPods-SproutMobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D75474225BAF709FAC0F00D /* libPods-SproutMobileTests.a */; };
 		9B19829930784055A0C6A12D /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E886AE0E2B442A796D50544 /* Foundation.ttf */; };
 		A97F5F087A714E5BA41AAE0B /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1896C1853CCA4BA499FF99E1 /* Ionicons.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		B6F9AC48A8D5CB3995526CD3 /* libPods-SproutMobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8787AFB6A31AB07A9FA72F3 /* libPods-SproutMobile-tvOSTests.a */; };
 		C1C05D6B4C7B490ABD7F848E /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB0580E185AD4FB7938A0602 /* SimpleLineIcons.ttf */; };
 		C74FBAC38488450493BF5BE9 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A407DBC7484060BF52262B /* libRNVectorIcons.a */; };
 		D24E37B407344365B96A0274 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2DD05A45624DA1A3960D2A /* libRNDeviceInfo.a */; };
@@ -385,20 +388,29 @@
 		2C505BDA8FFC464BB27C6A9B /* libjschelpers.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libjschelpers.a; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* SproutMobile-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SproutMobile-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* SproutMobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SproutMobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D75474225BAF709FAC0F00D /* libPods-SproutMobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SproutMobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C171302E43E9FDD1F6B8BE9 /* Pods-SproutMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SproutMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-SproutMobile/Pods-SproutMobile.release.xcconfig"; sourceTree = "<group>"; };
+		53A7C0D581C931AD0E17C799 /* libPods-SproutMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SproutMobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C35F0FA564D4E31A4E62B79 /* libyoga.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libyoga.a; sourceTree = "<group>"; };
 		5E886AE0E2B442A796D50544 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		62A407DBC7484060BF52262B /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		77140D57A0CD4D70903072EA /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		77D2D7377762907399681195 /* Pods-SproutMobile-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SproutMobile-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SproutMobile-tvOSTests/Pods-SproutMobile-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7E911075B02E4D009E3F595B /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFirebase.xcodeproj; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; };
 		7F9BE5BFE8DD4662848743CB /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		848A59A05CA85DF8E9C0CEF0 /* Pods-SproutMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SproutMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SproutMobile/Pods-SproutMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		863D00CD8C97CD247D1FD75A /* Pods-SproutMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SproutMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SproutMobileTests/Pods-SproutMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		8EA34EEA3984C156E6E5AA3E /* Pods-SproutMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SproutMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SproutMobileTests/Pods-SproutMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		929E4FEC002E4738A1999DEF /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		97E4ECFDE2DE40DCB3B8B205 /* libReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReact.a; sourceTree = "<group>"; };
+		A8787AFB6A31AB07A9FA72F3 /* libPods-SproutMobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SproutMobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		BE93AC8E8DD9406CBC44F8EC /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		DB0580E185AD4FB7938A0602 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		E5A276CF06D97BD82022523A /* Pods-SproutMobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SproutMobile-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SproutMobile-tvOSTests/Pods-SproutMobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0A401C78FB84DD4A0E7FCDF /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/RNI18n.xcodeproj"; sourceTree = "<group>"; };
 		F0C94D742068775300EB873D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE15E6ED1BE74298BA8748AB /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -410,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				94630460835AF20986025FDE /* libPods-SproutMobileTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +450,7 @@
 				578C2A15ED0B439892F0DA16 /* libcxxreact.a in Frameworks */,
 				5618FCAEE9BF4A5EB2235A42 /* libjschelpers.a in Frameworks */,
 				77F6A3B86BBF41338B245B03 /* libRNFirebase.a in Frameworks */,
+				4C3E6C0ADA06F15AC15240B7 /* libPods-SproutMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +473,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F9AC48A8D5CB3995526CD3 /* libPods-SproutMobile-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +595,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		5D992A8F7FEE6E3AFD04FC77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				848A59A05CA85DF8E9C0CEF0 /* Pods-SproutMobile.debug.xcconfig */,
+				4C171302E43E9FDD1F6B8BE9 /* Pods-SproutMobile.release.xcconfig */,
+				E5A276CF06D97BD82022523A /* Pods-SproutMobile-tvOSTests.debug.xcconfig */,
+				77D2D7377762907399681195 /* Pods-SproutMobile-tvOSTests.release.xcconfig */,
+				8EA34EEA3984C156E6E5AA3E /* Pods-SproutMobileTests.debug.xcconfig */,
+				863D00CD8C97CD247D1FD75A /* Pods-SproutMobileTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,6 +615,16 @@
 				5E9157351DD0AC6500FF2AA8 /* libRCTAnimation.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		67E8A67127AB283E9B8B9421 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53A7C0D581C931AD0E17C799 /* libPods-SproutMobile.a */,
+				A8787AFB6A31AB07A9FA72F3 /* libPods-SproutMobile-tvOSTests.a */,
+				3D75474225BAF709FAC0F00D /* libPods-SproutMobileTests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
@@ -639,6 +677,8 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				996D8D39C9DF4EB08E3642A2 /* Resources */,
 				F082370620677313005A608D /* Recovered References */,
+				5D992A8F7FEE6E3AFD04FC77 /* Pods */,
+				67E8A67127AB283E9B8B9421 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -736,9 +776,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SproutMobileTests" */;
 			buildPhases = (
+				B8FA3823368F710521D7ED5D /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				19BE263067C0E0BEB59DE87E /* [CP] Embed Pods Frameworks */,
+				1E63AC806B7444F6C19034F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -754,10 +797,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SproutMobile" */;
 			buildPhases = (
+				91354801DF0A54A670E0D713 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				0CE4053917917EB4D8565358 /* [CP] Embed Pods Frameworks */,
+				FFC49EC588D77050713605D5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -790,9 +836,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SproutMobile-tvOSTests" */;
 			buildPhases = (
+				19BF738F0BD5224CF80DCD3B /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
+				F0441BD88E32651FE6967817 /* [CP] Embed Pods Frameworks */,
+				FBF67CEFA62000D0A0357B36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1258,6 +1307,69 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		0CE4053917917EB4D8565358 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SproutMobile/Pods-SproutMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19BE263067C0E0BEB59DE87E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SproutMobileTests/Pods-SproutMobileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19BF738F0BD5224CF80DCD3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SproutMobile-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E63AC806B7444F6C19034F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SproutMobileTests/Pods-SproutMobileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1271,6 +1383,87 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		91354801DF0A54A670E0D713 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SproutMobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8FA3823368F710521D7ED5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SproutMobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0441BD88E32651FE6967817 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SproutMobile-tvOSTests/Pods-SproutMobile-tvOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBF67CEFA62000D0A0357B36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SproutMobile-tvOSTests/Pods-SproutMobile-tvOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC49EC588D77050713605D5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SproutMobile/Pods-SproutMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1339,6 +1532,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EA34EEA3984C156E6E5AA3E /* Pods-SproutMobileTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1376,6 +1570,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 863D00CD8C97CD247D1FD75A /* Pods-SproutMobileTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1410,6 +1605,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 848A59A05CA85DF8E9C0CEF0 /* Pods-SproutMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1435,6 +1631,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C171302E43E9FDD1F6B8BE9 /* Pods-SproutMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1545,6 +1742,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5A276CF06D97BD82022523A /* Pods-SproutMobile-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1576,6 +1774,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77D2D7377762907399681195 /* Pods-SproutMobile-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
