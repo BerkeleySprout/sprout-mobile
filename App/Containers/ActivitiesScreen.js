@@ -118,7 +118,7 @@ export default class ActivitiesScreen extends React.PureComponent {
 
 const mapStateToProps = (state) => {
   return {
-    // ...redux state to props here
+    
   }
 }
 
