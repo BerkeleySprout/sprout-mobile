@@ -73,6 +73,8 @@ export default StyleSheet.create({
     marginTop: 5,
     marginBottom: 15,
     borderRadius: 2,
+    paddingHorizontal: Metrics.smallMargin,
+    fontFamily: Fonts.type.base,
   },
   forgot: {
     fontFamily: Fonts.type.base,

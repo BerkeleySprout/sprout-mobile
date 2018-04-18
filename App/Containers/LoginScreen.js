@@ -61,6 +61,8 @@ export default class LoginScreen extends Component {
           editable={true}
           value={this.state.email}
           autoCapitalize={false}
+          autoCorrect={false}
+          keyboardType="email-address"
         />
 
         <Text style={styles.rowLabel}>
@@ -71,6 +73,9 @@ export default class LoginScreen extends Component {
           onChangeText={(password) => this.setState({password})}
           editable={true}
           value={this.state.password}
+          autoCapitalize={false}
+          autoCorrect={false}
+          secureTextEntry={true}
         />
 
         <Button
