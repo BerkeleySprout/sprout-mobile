@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import { Button, SocialIcon } from 'react-native-elements'
 import styles from "./Styles/LoginScreenStyle";
 import { Images, Metrics, Colors } from "../Themes"
+import firebase from 'react-native-firebase';
 
 export default class LoginScreen extends Component {
 
@@ -15,7 +16,22 @@ export default class LoginScreen extends Component {
     };
   }
 
+  componentDidMount() {
+    this.authSubscription = firebase.auth().onAuthStateChanged((user) => {
+      this.setState({
+        loading: false,
+        user,
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this.authSubscription();
+  }
+
   onPressSignIn() {
+    console.log(this.state.email);
+    console.log(this.state.password);
     this.props.navigation.navigate('Tabs')
   }
 
@@ -42,8 +58,9 @@ export default class LoginScreen extends Component {
         <TextInput
           style={styles.textInput}
           onChangeText={(email) => this.setState({email})}
-          editable = {true}
+          editable={true}
           value={this.state.email}
+          autoCapitalize={false}
         />
 
         <Text style={styles.rowLabel}>
@@ -52,7 +69,7 @@ export default class LoginScreen extends Component {
         <TextInput
           style={styles.textInput}
           onChangeText={(password) => this.setState({password})}
-          editable = {true}
+          editable={true}
           value={this.state.password}
         />
 

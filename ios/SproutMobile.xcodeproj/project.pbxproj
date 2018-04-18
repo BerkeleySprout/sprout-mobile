@@ -57,7 +57,10 @@
 		C74FBAC38488450493BF5BE9 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A407DBC7484060BF52262B /* libRNVectorIcons.a */; };
 		D24E37B407344365B96A0274 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2DD05A45624DA1A3960D2A /* libRNDeviceInfo.a */; };
 		EC77ECC6904245DB83B02CA8 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE93AC8E8DD9406CBC44F8EC /* MaterialCommunityIcons.ttf */; };
-		F0C94D9D2068775300EB873D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0C94D742068775300EB873D /* GoogleService-Info.plist */; };
+		F02C95BD2087DAD200A3ADDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F02C95942087DAD200A3ADDC /* GoogleService-Info.plist */; };
+		F02C95BE2087DAD200A3ADDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F02C95942087DAD200A3ADDC /* GoogleService-Info.plist */; };
+		F02C95BF2087DAD200A3ADDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F02C95942087DAD200A3ADDC /* GoogleService-Info.plist */; };
+		F02C95C02087DAD200A3ADDC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F02C95942087DAD200A3ADDC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -411,8 +414,8 @@
 		BE93AC8E8DD9406CBC44F8EC /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		DB0580E185AD4FB7938A0602 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		E5A276CF06D97BD82022523A /* Pods-SproutMobile-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SproutMobile-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SproutMobile-tvOSTests/Pods-SproutMobile-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F02C95942087DAD200A3ADDC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F0A401C78FB84DD4A0E7FCDF /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/RNI18n.xcodeproj"; sourceTree = "<group>"; };
-		F0C94D742068775300EB873D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE15E6ED1BE74298BA8748AB /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -562,7 +565,7 @@
 		13B07FAE1A68108700A75B9A /* SproutMobile */ = {
 			isa = PBXGroup;
 			children = (
-				F0C94D742068775300EB873D /* GoogleService-Info.plist */,
+				F02C95942087DAD200A3ADDC /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1252,6 +1255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02C95BE2087DAD200A3ADDC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1259,7 +1263,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0C94D9D2068775300EB873D /* GoogleService-Info.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				53B46B2F03F74B3487BF0E4F /* Entypo.ttf in Resources */,
@@ -1272,6 +1275,7 @@
 				9442C26420484AB3942E4B41 /* Octicons.ttf in Resources */,
 				C1C05D6B4C7B490ABD7F848E /* SimpleLineIcons.ttf in Resources */,
 				7C6D96FF2ECA44019E39136E /* Zocial.ttf in Resources */,
+				F02C95BD2087DAD200A3ADDC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1280,6 +1284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				F02C95BF2087DAD200A3ADDC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1287,6 +1292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02C95C02087DAD200A3ADDC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
