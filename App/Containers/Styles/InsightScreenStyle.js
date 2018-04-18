@@ -16,7 +16,6 @@ export default StyleSheet.create({
   },
   bar: {
     backgroundColor: Colors.nephritis,
-    color: 'black',
     shadowColor: Colors.shadow,
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.7,

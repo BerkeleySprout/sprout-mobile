@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { ScrollView, Text, TextInput, Image, View, ImageBackground, TouchableOpacity, TouchableHighlight } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { Button, SocialIcon } from 'react-native-elements'
+import { TextField } from 'react-native-material-textfield';
+import PasswordInputText from 'react-native-hide-show-password-input';
 import styles from "./Styles/LoginScreenStyle";
 import { Images, Metrics, Colors } from "../Themes"
 import firebase from 'react-native-firebase';
@@ -52,30 +54,34 @@ export default class LoginScreen extends Component {
         Sign In
         </Text>
 
-        <Text style={styles.rowLabel}>
-        Email
-        </Text>
-        <TextInput
-          style={styles.textInput}
-          onChangeText={(email) => this.setState({email})}
-          editable={true}
-          value={this.state.email}
-          autoCapitalize={false}
+        <TextField
+          style={styles.text}
+          containerStyle={styles.textInput}
+          autoCapitalize={"none"}
           autoCorrect={false}
-          keyboardType="email-address"
+          keyboardType={"email-address"}
+          label='Email Address'
+          labelTextStyle={styles.text}
+          titleTextStyle={styles.text}
+          affixTextStyle={styles.text}
+          lineWidth={1.5}
+          value={this.state.email}
+          onChangeText={(email) => this.setState({email})}
         />
 
-        <Text style={styles.rowLabel}>
-        Password
-        </Text>
-        <TextInput
-          style={styles.textInput}
-          onChangeText={(password) => this.setState({password})}
-          editable={true}
-          value={this.state.password}
-          autoCapitalize={false}
+        <TextField
+          style={styles.text}
+          containerStyle={styles.textInput}
+          autoCapitalize={"none"}
           autoCorrect={false}
           secureTextEntry={true}
+          label='Password'
+          labelTextStyle={styles.text}
+          titleTextStyle={styles.text}
+          affixTextStyle={styles.text}
+          lineWidth={1.5}
+          value={this.state.password}
+          onChangeText={(password) => this.setState({password})}
         />
 
         <Button
@@ -83,7 +89,7 @@ export default class LoginScreen extends Component {
           title="Sign In"
           color={Colors.snow}
           buttonStyle={styles.button}
-          textStyle={styles.buttonText}
+          textStyle={styles.text}
         />
 
         <Button
@@ -91,7 +97,7 @@ export default class LoginScreen extends Component {
           title="Sign In with Facebook"
           color={Colors.snow}
           buttonStyle={styles.buttonFB}
-          textStyle={styles.buttonText}
+          textStyle={styles.text}
         />
 
         <Text style={styles.forgot}>
