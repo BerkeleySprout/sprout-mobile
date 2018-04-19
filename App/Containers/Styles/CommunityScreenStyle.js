@@ -13,7 +13,6 @@ export default StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.7,
     shadowRadius: 3,
-    fontFamily: Fonts.type.base,
   },
   barText: {
     color: Colors.textLight,
@@ -26,17 +25,15 @@ export default StyleSheet.create({
     marginTop: 10,
     width: '50%',
     alignSelf: 'center',
-    fontFamily: Fonts.type.base,
-    borderRadius: 20
+    borderRadius: 20,
   },
   button: {
-    fontSize: Fonts.size.small,
+    
   },
   selectedButton: {
     backgroundColor: Colors.silver,
   },
   searchBar: {
-    fontFamily: Fonts.type.base,
   },
   sectionHeader: {
     color: Colors.text

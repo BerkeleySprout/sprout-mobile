@@ -185,11 +185,11 @@ class CommunityScreen extends React.PureComponent {
         <List containerStyle={{marginBottom: 20}}>
           {
             list.map((l, i) => (
-              <TouchableOpacity>
+              <TouchableOpacity
+                key={i}>
                 <ListItem
                   roundAvatar
                   avatar={{uri:l.avatar_url}}
-                  key={i}
                   title={l.name}
                 />
               </TouchableOpacity>

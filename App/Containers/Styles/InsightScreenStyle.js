@@ -20,7 +20,6 @@ export default StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.7,
     shadowRadius: 3,
-    fontFamily: Fonts.type.base,
   },
   barText: {
     color: Colors.textLight,

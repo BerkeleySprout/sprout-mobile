@@ -48,10 +48,6 @@ export default StyleSheet.create({
   text: {
     fontFamily: Fonts.type.base,
   },
-  rowLabel: {
-    marginLeft: 60,
-    fontFamily: Fonts.type.base,
-  },
   textInput: {
     marginLeft: 16,
     marginRight: 16,

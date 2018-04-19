@@ -14,7 +14,6 @@ export default StyleSheet.create({
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.7,
     shadowRadius: 3,
-    fontFamily: Fonts.type.base,
   },
   barText: {
     color: Colors.textLight,
@@ -33,7 +32,7 @@ export default StyleSheet.create({
     color: Colors.background,
     fontFamily: Fonts.type.base,
     fontSize: Fonts.size.h3,
-    padding: 50
+    padding: 50,
   },
   row: {
     width: 150,
