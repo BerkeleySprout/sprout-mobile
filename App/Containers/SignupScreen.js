@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import { ScrollView, Text, TextInput, Image, View, ImageBackground, TouchableOpacity, TouchableHighlight } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { Button, SocialIcon } from 'react-native-elements'
-import styles from "./Styles/SignupScreenStyle";
+import { TextField } from 'react-native-material-textfield';
+import PasswordInputText from 'react-native-hide-show-password-input';
+import styles from "./Styles/LoginScreenStyle";
 import { Images, Metrics, Colors } from "../Themes"
+import firebase from 'react-native-firebase';
 
 export default class SignupScreen extends Component {
 
@@ -21,7 +24,7 @@ export default class SignupScreen extends Component {
   }
 
   onPressLogin() {
-    this.props.navigation.navigate('Login')
+    this.props.navigation.navigate('LoginScreen')
   }
 
   render () {
@@ -37,34 +40,48 @@ export default class SignupScreen extends Component {
         Sign In
         </Text>
 
-        <Text style={styles.rowLabel}>
-        Full Name
-        </Text>
-        <TextInput
-          style={styles.textInput}
-          onChangeText={(fullname) => this.setState({fullname})}
-          editable = {true}
+        <TextField
+          style={styles.text}
+          containerStyle={styles.textInput}
+          autoCapitalize={"words"}
+          autoCorrect={false}
+          label='Full Name (First-Last)'
+          labelTextStyle={styles.text}
+          titleTextStyle={styles.text}
+          affixTextStyle={styles.text}
+          lineWidth={1.5}
           value={this.state.fullname}
+          onChangeText={(fullname) => this.setState({fullname})}
         />
 
-        <Text style={styles.rowLabel}>
-        Email
-        </Text>
-        <TextInput
-          style={styles.textInput}
-          onChangeText={(email) => this.setState({email})}
-          editable = {true}
+        <TextField
+          style={styles.text}
+          containerStyle={styles.textInput}
+          autoCapitalize={"none"}
+          autoCorrect={false}
+          keyboardType={"email-address"}
+          label='Email Address'
+          labelTextStyle={styles.text}
+          titleTextStyle={styles.text}
+          affixTextStyle={styles.text}
+          lineWidth={1.5}
           value={this.state.email}
+          onChangeText={(email) => this.setState({email})}
         />
 
-        <Text style={styles.rowLabel}>
-        Password
-        </Text>
-        <TextInput
-          style={styles.textInput}
-          onChangeText={(password) => this.setState({password})}
-          editable = {true}
+        <TextField
+          style={styles.text}
+          containerStyle={styles.textInput}
+          autoCapitalize={"none"}
+          autoCorrect={false}
+          secureTextEntry={true}
+          label='Password'
+          labelTextStyle={styles.text}
+          titleTextStyle={styles.text}
+          affixTextStyle={styles.text}
+          lineWidth={1.5}
           value={this.state.password}
+          onChangeText={(password) => this.setState({password})}
         />
 
         <Button
@@ -72,7 +89,7 @@ export default class SignupScreen extends Component {
           title="Create Account"
           color={Colors.snow}
           buttonStyle={styles.button}
-          textStyle={styles.buttonText}
+          textStyle={styles.text}
         />
 
         <Text style={styles.signUpAction}>

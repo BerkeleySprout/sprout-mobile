@@ -24,6 +24,9 @@ export default class LoginScreen extends Component {
         loading: false,
         user,
       });
+      console.log("HIHI")
+      console.log(user)
+      console.log("HELLO")
     });
   }
 
@@ -34,11 +37,26 @@ export default class LoginScreen extends Component {
   onPressSignIn() {
     console.log(this.state.email);
     console.log(this.state.password);
-    this.props.navigation.navigate('Tabs')
+    const { email, password } = this.state;
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((user) => {
+        // If you need to do anything with the user, do it here
+        // The user will be logged in automatically by the 
+        // `onAuthStateChanged` listener we set up in App.js earlier
+        console.log("I'M LOGGED IN!")
+        console.log(user)
+      })
+      .catch((error) => {
+        const { code, message } = error;
+        // For details of error codes, see the docs
+        // The message contains the default Firebase string
+        // representation of the error
+        console.log(message)
+      });
   }
 
   onPressSignUp() {
-    this.props.navigation.navigate('Signup')
+    this.props.navigation.navigate('SignupScreen')
   }
 
   render () {

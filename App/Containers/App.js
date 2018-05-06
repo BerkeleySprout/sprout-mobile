@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import RootContainer from './RootContainer'
 import createStore from '../Redux'
+import Config from 'react-native-config';
+import firebase from 'react-native-firebase';
 
 // create our store
 const store = createStore()
@@ -18,6 +20,18 @@ const store = createStore()
  * We separate like this to play nice with React Native's hot reloading.
  */
 class App extends Component {
+
+	componentWillMount() {
+    firebase.initializeApp({
+      apiKey: "AIzaSyBAxI9siULiEKvdcxXOm1Wow3XZXN0q0Nk",
+	    authDomain: "berkeley-sprout.firebaseapp.com",
+	    databaseURL: "https://berkeley-sprout.firebaseio.com",
+	    projectId: "berkeley-sprout",
+	    storageBucket: "berkeley-sprout.appspot.com",
+	    messagingSenderId: "723781488882"
+    });
+  }
+
   render () {
     return (
       <Provider store={store}>
