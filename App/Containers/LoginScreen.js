@@ -14,19 +14,16 @@ export default class LoginScreen extends Component {
     super(props);
     this.state = { 
       email: '',
-      password: '' 
+      password: '',
+      loading: false, 
     };
   }
 
   componentDidMount() {
     this.authSubscription = firebase.auth().onAuthStateChanged((user) => {
-      this.setState({
-        loading: false,
-        user,
-      });
-      console.log("HIHI")
-      console.log(user)
-      console.log("HELLO")
+      if (user) {
+        this.props.navigation.navigate('Tabs')
+      }
     });
   }
 
@@ -35,8 +32,6 @@ export default class LoginScreen extends Component {
   }
 
   onPressSignIn() {
-    console.log(this.state.email);
-    console.log(this.state.password);
     const { email, password } = this.state;
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then((user) => {
@@ -47,10 +42,7 @@ export default class LoginScreen extends Component {
         console.log(user)
       })
       .catch((error) => {
-        const { code, message } = error;
-        // For details of error codes, see the docs
-        // The message contains the default Firebase string
-        // representation of the error
+        const { code, message } = error
         console.log(message)
       });
   }

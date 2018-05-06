@@ -15,12 +15,33 @@ export default class SignupScreen extends Component {
     this.state = { 
       email: '',
       password: '',
-      fullname: ''
+      fullname: '',
+      loading: false,
     };
   }
 
+  componentDidMount() {
+    this.authSubscription = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.props.navigation.navigate('Tabs')
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this.authSubscription();
+  }
+
   onPressCreate() {
-    this.props.navigation.navigate('Tabs')
+    const { email, password } = this.state;
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then(() => { 
+        this.setState({ error: '', loading: false }); 
+      })
+      .catch((error) => {
+        const { code, message } = error
+        console.log(message)
+      });
   }
 
   onPressLogin() {
@@ -45,7 +66,7 @@ export default class SignupScreen extends Component {
           containerStyle={styles.textInput}
           autoCapitalize={"words"}
           autoCorrect={false}
-          label='Full Name (First-Last)'
+          label='Full Name (e.g. Jane Doe)'
           labelTextStyle={styles.text}
           titleTextStyle={styles.text}
           affixTextStyle={styles.text}
