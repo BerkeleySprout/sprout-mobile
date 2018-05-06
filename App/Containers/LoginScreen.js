@@ -11,7 +11,7 @@ import firebase from 'react-native-firebase';
 export default class LoginScreen extends Component {
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = { 
       email: '',
       password: '',
@@ -25,10 +25,6 @@ export default class LoginScreen extends Component {
         this.props.navigation.navigate('Tabs')
       }
     });
-  }
-
-  componentWillUnmount() {
-    this.authSubscription();
   }
 
   onPressSignIn() {

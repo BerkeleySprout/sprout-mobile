@@ -1,33 +1,32 @@
-import React from 'react';
-import {
-  ActivityIndicator,
-  AsyncStorage,
-  StatusBar,
-  StyleSheet,
-  View,
-} from 'react-native';
+import React, { Component } from 'react'
+import { View, Spinner } from 'react-native'
+import styles from "./Styles/LoginScreenStyle"
+import firebase from 'react-native-firebase'
 
-export default class AuthLoadingScreen extends React.Component {
+export default class AuthLoadingScreen extends Component {
+
   constructor(props) {
-    super(props);
-    this._bootstrapAsync();
+    super(props)
   }
 
-  // Fetch the token from storage then navigate to our appropriate place
-  _bootstrapAsync = async () => {
-    const userToken = await AsyncStorage.getItem('userToken');
+  componentDidMount() {
+    this.authSubscription = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.props.navigation.navigate('Tabs')
+      } else {
+        this.props.navigation.navigate('LoginScreen')
+      }
+    });
+  }
 
-    // This will switch to the App screen or Auth screen and this loading
-    // screen will be unmounted and thrown away.
-    this.props.navigation.navigate(userToken ? 'App' : 'Auth');
-  };
+  componentWillUnmount() {
+    this.authSubscription()
+  }
 
-  // Render any loading content that you like here
   render() {
     return (
-      <View style={styles.container}>
-        <ActivityIndicator />
-        <StatusBar barStyle="default" />
+      <View>
+        <Spinner size="large" />
       </View>
     );
   }

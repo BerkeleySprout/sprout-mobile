@@ -86,5 +86,5 @@ export default StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-  }
+  },
 })

@@ -23,7 +23,7 @@ export default class SignupScreen extends Component {
   componentDidMount() {
     this.authSubscription = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.props.navigation.navigate('Tabs')
+        this.props.navigation.goBack()
       }
     });
   }

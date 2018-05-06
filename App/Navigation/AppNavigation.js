@@ -75,6 +75,12 @@ var AppStack = StackNavigator({
       title: "Signup"
     }  
   },
+  Loading: {
+    screen: AuthLoadingScreen,
+    navigationOptions: {
+      title: "Loading"
+    }
+  },
   Tabs: { 
     screen: MainScreenNavigator,
     navigationOptions: {
