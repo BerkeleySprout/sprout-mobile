@@ -3,6 +3,7 @@ import { Colors, Metrics, Fonts } from '../../Themes'
 
 export default StyleSheet.create({
   container: {
+    paddingHorizontal: 45,
     paddingTop: 70,
     backgroundColor: Colors.background,
     flex: 1,
@@ -13,7 +14,7 @@ export default StyleSheet.create({
     alignSelf: 'center'
   },
   logo: {
-    width: '21%',
+    width: '28%',
     height: '10%',
     alignSelf: 'center',
     marginBottom: Metrics.doubleBaseMargin,
@@ -24,16 +25,10 @@ export default StyleSheet.create({
     fontSize: Fonts.size.h5,
     margin: Metrics.doubleBaseMargin,
   },
-  form: {
-    backgroundColor: Colors.snow,
-    margin: Metrics.baseMargin,
-    borderRadius: 4
-  },
   button: {
     backgroundColor: Colors.greyBlue,
-    margin: Metrics.smallMargin,
-    marginLeft: 45,
-    marginRight: 45,
+    marginTop: Metrics.doubleBaseMargin,
+    marginBottom: Metrics.baseMargin,
     borderRadius: 5,
     shadowColor: '#000',
     shadowOffset: { width: 1, height: 1 },
@@ -42,37 +37,20 @@ export default StyleSheet.create({
   },
   buttonFB: {
     backgroundColor: Colors.facebook,
-    margin: Metrics.bigMargin,
-    marginLeft: 45,
-    marginRight: 45,
+    marginTop: Metrics.baseMargin,
+    marginBottom: Metrics.baseMargin,
     borderRadius: 5,
     shadowColor: '#000',
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.7,
     shadowRadius: 1,
   },
-  buttonText: {
-    fontFamily: Fonts.type.base,
-  },
-  row: {
-    paddingVertical: Metrics.doubleBaseMargin,
-    paddingHorizontal: Metrics.doubleBaseMargin,
-    flexDirection: 'row',
-    flex: 1
-  },
-  rowLabel: {
-    marginLeft: 60,
+  text: {
     fontFamily: Fonts.type.base,
   },
   textInput: {
-    height: 40, 
-    borderColor: 'gray', 
-    borderWidth: 0.5, 
-    marginLeft: 60,
-    marginRight: 60,
-    marginTop: 5,
-    marginBottom: 15,
-    borderRadius: 2,
+    marginLeft: 16,
+    marginRight: 16,
   },
   forgot: {
     fontFamily: Fonts.type.base,

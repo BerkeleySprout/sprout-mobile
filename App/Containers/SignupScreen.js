@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import { Button, SocialIcon } from 'react-native-elements'
 import { TextField } from 'react-native-material-textfield';
 import PasswordInputText from 'react-native-hide-show-password-input';
-import styles from "./Styles/LoginScreenStyle";
+import styles from "./Styles/SignupScreenStyle";
 import { Images, Metrics, Colors } from "../Themes"
 import firebase from 'react-native-firebase';
 
@@ -17,13 +17,16 @@ export default class SignupScreen extends Component {
       password: '',
       fullname: '',
       loading: false,
+      error: '',
+      pwerror: '',
     };
+    this.onChangePassword = this.onChangePassword.bind(this)
   }
 
   componentDidMount() {
     this.authSubscription = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.props.navigation.goBack()
+        this.props.navigation.navigate("Tabs")
       }
     });
   }
@@ -40,12 +43,22 @@ export default class SignupScreen extends Component {
       })
       .catch((error) => {
         const { code, message } = error
+        this.setState({  })
         console.log(message)
       });
   }
 
   onPressLogin() {
-    this.props.navigation.navigate('LoginScreen')
+    this.props.navigation.goBack()
+  }
+
+  onChangePassword(password) {
+    this.setState({password})
+    if (password.count < 5) {
+      this.setState({ pwerror: 'Password is too short' })
+    } else {
+      this.setState({ pwerror: '' })
+    }
   }
 
   render () {
@@ -58,7 +71,7 @@ export default class SignupScreen extends Component {
         </Image>
         
         <Text style={styles.title}>
-        Sign In
+        Sign Up
         </Text>
 
         <TextField
@@ -87,7 +100,9 @@ export default class SignupScreen extends Component {
           affixTextStyle={styles.text}
           lineWidth={1.5}
           value={this.state.email}
-          onChangeText={(email) => this.setState({email})}
+          onChangeText={(email) => 
+            this.setState({email})
+          }
         />
 
         <TextField
@@ -102,7 +117,7 @@ export default class SignupScreen extends Component {
           affixTextStyle={styles.text}
           lineWidth={1.5}
           value={this.state.password}
-          onChangeText={(password) => this.setState({password})}
+          onChangeText={(password) => this.onChangePassword(password)}
         />
 
         <Button
