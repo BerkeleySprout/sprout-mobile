@@ -3,7 +3,6 @@ import { ScrollView, Text, TextInput, Image, View, ImageBackground, TouchableOpa
 import Icon from 'react-native-vector-icons/FontAwesome'
 import { Button, SocialIcon } from 'react-native-elements'
 import { TextField } from 'react-native-material-textfield';
-import PasswordInputText from 'react-native-hide-show-password-input';
 import styles from "./Styles/LoginScreenStyle";
 import { Images, Metrics, Colors } from "../Themes"
 import firebase from 'react-native-firebase';
@@ -12,11 +11,24 @@ export default class LoginScreen extends Component {
 
   constructor(props) {
     super(props)
+
+    this.onFocus = this.onFocus.bind(this);
+    this.emailRef = this.updateRef.bind(this, 'email')
+    this.passwordRef = this.updateRef.bind(this, 'password')
+
     this.state = { 
       email: '',
       password: '',
-      loading: false, 
-    };
+      loading: false,
+      errors: {
+        email: '',
+        password: ''
+      }
+    }
+  }
+
+  updateRef(name, ref) {
+    this[name] = ref;
   }
 
   componentDidMount() {
@@ -25,6 +37,28 @@ export default class LoginScreen extends Component {
         this.props.navigation.navigate('Tabs')
       }
     });
+  }
+
+  onFocus() {
+    var errors = this.state.errors
+
+    for (let name in errors) {
+      let ref = this[name];
+
+      if (ref && ref.isFocused()) {
+        delete errors[name];
+      }
+    }
+
+    this.setState({ errors });
+  }
+
+  onSubmitEmail() {
+    this.password.focus();
+  }
+
+  onSubmitPassword() {
+    this.password.blur();
   }
 
   onPressSignIn() {
@@ -40,6 +74,30 @@ export default class LoginScreen extends Component {
       .catch((error) => {
         const { code, message } = error
         console.log(message)
+        let errors = {};
+        
+        ['email', 'password']
+        .forEach((name) => {
+          let value = this[name].value();
+          if (!value) {
+            errors[name] = 'Should not be empty';
+          } else {
+            if ('password' === name && value.length < 6) {
+              errors[name] = 'Must be at least 6 characters long';
+            }
+            let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+            if ('email' === name && reg.test(value) === false) {
+              errors[name] = "Email is badly formatted"
+            }
+          }
+        });
+
+        if (!errors["email"] && !errors["password"]) {
+          errors["email"] = "Your email or password is invalid"
+          errors["password"] = "Your email or password is invalid"
+        }
+
+        this.setState({ errors })
       });
   }
 
@@ -61,33 +119,43 @@ export default class LoginScreen extends Component {
         </Text>
 
         <TextField
+          ref={this.emailRef}
           style={styles.text}
+          labelTextStyle={styles.text}
+          titleTextStyle={styles.text}
+          affixTextStyle={styles.text}
           containerStyle={styles.textInput}
           autoCapitalize={"none"}
           autoCorrect={false}
           keyboardType={"email-address"}
           label='Email Address'
-          labelTextStyle={styles.text}
-          titleTextStyle={styles.text}
-          affixTextStyle={styles.text}
+          error={this.state.errors.email}
           lineWidth={1.5}
           value={this.state.email}
+          onFocus={this.onFocus}
           onChangeText={(email) => this.setState({email})}
+          onSubmitEditing={this.onSubmitEmail}
+          returnKeyType='next'
         />
 
         <TextField
+          ref={this.passwordRef}
           style={styles.text}
+          labelTextStyle={styles.text}
+          titleTextStyle={styles.text}
+          affixTextStyle={styles.text}
           containerStyle={styles.textInput}
           autoCapitalize={"none"}
           autoCorrect={false}
           secureTextEntry={true}
           label='Password'
-          labelTextStyle={styles.text}
-          titleTextStyle={styles.text}
-          affixTextStyle={styles.text}
+          error={this.state.errors.password}
           lineWidth={1.5}
           value={this.state.password}
+          onFocus={this.onFocus}
           onChangeText={(password) => this.setState({password})}
+          onSubmitEditing={this.onSubmitPassword}
+          returnKeyType='done'
         />
 
         <Button
