@@ -62,43 +62,42 @@ export default class LoginScreen extends Component {
   }
 
   onPressSignIn() {
-    const { email, password } = this.state;
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((user) => {
-        // If you need to do anything with the user, do it here
-        // The user will be logged in automatically by the 
-        // `onAuthStateChanged` listener we set up in App.js earlier
-        console.log("I'M LOGGED IN!")
-        console.log(user)
-      })
-      .catch((error) => {
-        const { code, message } = error
-        console.log(message)
-        let errors = {};
-        
-        ['email', 'password']
-        .forEach((name) => {
-          let value = this[name].value();
-          if (!value) {
-            errors[name] = 'Should not be empty';
-          } else {
-            if ('password' === name && value.length < 6) {
-              errors[name] = 'Must be at least 6 characters long';
-            }
-            let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-            if ('email' === name && reg.test(value) === false) {
-              errors[name] = "Email is badly formatted"
-            }
-          }
-        });
-
-        if (!errors["email"] && !errors["password"]) {
+    let errors = {};
+    ['email', 'password']
+    .forEach((name) => {
+      let value = this[name].value();
+      if (!value) {
+        errors[name] = 'Should not be empty';
+      } else {
+        if ('password' === name && value.length < 6) {
+          errors[name] = 'Must be at least 6 characters long';
+        }
+        let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        if ('email' === name && reg.test(value) === false) {
+          errors[name] = "Email is badly formatted"
+        }
+      }
+    });
+    this.setState({ errors });
+    if (!errors["email"] && !errors["password"]) {
+      const { email, password } = this.state;
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((user) => {
+          // If you need to do anything with the user, do it here
+          // The user will be logged in automatically by the 
+          // `onAuthStateChanged` listener we set up in App.js earlier
+          console.log("I'M LOGGED IN!")
+          console.log(user)
+        })
+        .catch((error) => {
+          const { code, message } = error
+          console.log(message)
+          let errors = {};
           errors["email"] = "Your email or password is invalid"
           errors["password"] = "Your email or password is invalid"
-        }
-
-        this.setState({ errors })
-      });
+          this.setState({ errors });
+        });
+    }
   }
 
   onPressSignUp() {
