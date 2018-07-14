@@ -48,7 +48,7 @@ export default class InsightScreen extends Component {
           <Timeline
             data={this.data}
             circleSize={20}
-            circleColor={Colors.green}
+            circleColor={Colors.green2}
             innerCircle={'dot'}
             lineColor={Colors.cloud}
             timeStyle={{textAlign: 'center', backgroundColor: Colors.green2, color:'white', padding:5, borderRadius:13, overflow: 'hidden'}}
