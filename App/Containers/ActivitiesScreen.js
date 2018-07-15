@@ -44,12 +44,18 @@ export default class ActivitiesScreen extends React.PureComponent {
     ]
   }
 
+  onPressActivity = () => {
+    console.log("Activity Pressed")
+  }
+
   renderItem ({section, item}) {
     const gradientHeight = 100
     const gradientBackground = 'black'
     const data = Array.from({ length: gradientHeight })
     return (
-      <TouchableOpacity style={styles.row}>
+      <TouchableOpacity 
+      style={styles.row}
+      onPress={this.onPressActivity}>
         <ImageBackground
         style={styles.imageBackground}
         resizeMode={'cover'}
