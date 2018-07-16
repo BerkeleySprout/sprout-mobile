@@ -87,9 +87,6 @@ export default class ActivitiesScreen extends React.PureComponent {
     return <View style={styles.sectionHeaderView}><Text style={styles.sectionHeader}>{section.key}</Text></View> 
   }
 
-  renderEmpty = () =>
-    <Text style={styles.label}> - Nothing to See Here - </Text>
-
   keyExtractor = (item, index) => index
 
   oneScreensWorth = 20
