@@ -89,7 +89,6 @@ class CommunityScreen extends React.PureComponent {
     this.setState({ results });
   }
 
-  // How many items should be kept im memory as we scroll?
   oneScreensWorth = 20
 
   render () {
