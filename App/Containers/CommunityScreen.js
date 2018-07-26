@@ -5,12 +5,14 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import ActionBar from 'react-native-action-bar'
 import { Header, SearchBar, List, ListItem, ButtonGroup } from 'react-native-elements'
 import styles from './Styles/CommunityScreenStyle'
+import firebase from 'react-native-firebase';
 
 class CommunityScreen extends React.PureComponent {
   constructor () {
     super()
     this.state = {
-      selectedIndex: 2
+      selectedIndex: 2,
+      users: []
     }
     this.updateIndex = this.updateIndex.bind(this)
   }
@@ -92,6 +94,12 @@ class CommunityScreen extends React.PureComponent {
   oneScreensWorth = 20
 
   render () {
+    var database = firebase.database();
+    database.ref("users/").once("value", snapshot => {
+      this.state.users = snapshot.val()
+      console.log(this.state.users)
+    })
+
     const list = [
       {
         name: 'Amy Farha',
