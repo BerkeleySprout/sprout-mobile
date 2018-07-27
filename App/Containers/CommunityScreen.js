@@ -98,6 +98,7 @@ class CommunityScreen extends React.PureComponent {
     database.ref("users/").once("value", snapshot => {
       this.state.users = snapshot.val()
       console.log(this.state.users)
+      console.log(this.state.users.key)
     })
 
     const list = [
