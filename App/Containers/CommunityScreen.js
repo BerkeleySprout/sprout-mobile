@@ -121,7 +121,6 @@ class CommunityScreen extends React.PureComponent {
     var database = firebase.database();
     database.ref("users/").once("value", snapshot => {
       var userSnapshot = snapshot.val()
-      console.log(userSnapshot)
       for (user in userSnapshot) {
         list.push(userSnapshot[user])
         this.state.users.push(userSnapshot[user])
