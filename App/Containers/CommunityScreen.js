@@ -125,7 +125,6 @@ class CommunityScreen extends React.PureComponent {
         list.push(userSnapshot[user])
         this.state.users.push(userSnapshot[user])
       }
-      console.log(list)
       this.forceUpdate()
     })
 
