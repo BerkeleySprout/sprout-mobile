@@ -144,7 +144,7 @@ class CommunityScreen extends React.PureComponent {
           round
           lightTheme
           containerStyle={styles.searchBar}
-          placeholder='Search for people...' />
+          placeholder='Search for friends...' />
         <ButtonGroup
           buttons={buttons}
           onPress={this.updateIndex.bind(this)}
