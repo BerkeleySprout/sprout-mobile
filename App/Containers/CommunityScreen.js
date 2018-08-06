@@ -67,7 +67,6 @@ class CommunityScreen extends React.PureComponent {
           title={'Community'}
           titleStyle={styles.barText}
           titleContainerStyle={styles.barTextContainer}
-          onLeftPress={() => console.log('Left!')}
         />
         <SearchBar
           round
@@ -83,7 +82,7 @@ class CommunityScreen extends React.PureComponent {
           selectedButtonStyle={styles.selectedButton}
         />
         <ScrollView>
-        <List containerStyle={{marginBottom: 20}}>
+        <List>
           {
             this.state.users.map((l, i) => (
               <TouchableOpacity
