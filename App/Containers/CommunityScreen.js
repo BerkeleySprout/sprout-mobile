@@ -13,6 +13,7 @@ class CommunityScreen extends React.PureComponent {
     this.state = {
       selectedIndex: 1,
       users: [],
+      groups: [],
       refreshing: false
     }
     this.updateIndex = this.updateIndex.bind(this)
