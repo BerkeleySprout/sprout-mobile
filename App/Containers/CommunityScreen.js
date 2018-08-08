@@ -37,10 +37,6 @@ class CommunityScreen extends React.PureComponent {
 
   keyExtractor = (item, index) => index
 
-  _handleResults(results) {
-    this.setState({ results });
-  }
-
   oneScreensWorth = 20
 
   render () {
