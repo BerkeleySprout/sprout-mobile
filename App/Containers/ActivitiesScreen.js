@@ -99,7 +99,6 @@ export default class ActivitiesScreen extends React.PureComponent {
           title={'Activities'}
           titleStyle={styles.barText}
           titleContainerStyle={styles.barTextContainer}
-          onLeftPress={() => console.log('Left!')}
         />
         <SectionList
           horizontal={false}

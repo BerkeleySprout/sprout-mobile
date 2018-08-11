@@ -14,7 +14,8 @@ class CommunityScreen extends React.PureComponent {
       selectedIndex: 0,
       users: [],
       groups: [],
-      refreshing: false
+      refreshing: false,
+      error: null
     }
     this.updateIndex = this.updateIndex.bind(this)
   }
@@ -30,6 +31,21 @@ class CommunityScreen extends React.PureComponent {
     });
   }
 
+  getUsers() {
+    var database = firebase.database();
+    database.ref("users/").once("value", snapshot => {
+      var userSnapshot = snapshot.val()
+      var tempUsers = [];
+      for (user in userSnapshot) {
+        tempUsers.push(userSnapshot[user])
+        this.setState({
+          users: tempUsers
+        })
+      }
+      this.forceUpdate()
+    })
+  }
+
   static navigationOptions = {
     tabBarLabel: "Community",
     tabBarIcon: ({ tintColor }) => <Icon name="users" size={20} color={tintColor}/>
@@ -41,18 +57,7 @@ class CommunityScreen extends React.PureComponent {
 
   render () {
 
-    console.log("reloaded")
-
-    var database = firebase.database();
-    database.ref("users/").once("value", snapshot => {
-      var userSnapshot = snapshot.val()
-      var tempUsers = [];
-      for (user in userSnapshot) {
-        tempUsers.push(userSnapshot[user])
-        this.state.users = tempUsers
-      }
-      this.forceUpdate()
-    })
+    this.getUsers()
 
     const buttons = ['People', 'Groups']
     const { selectedIndex } = this.state
