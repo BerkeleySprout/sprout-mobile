@@ -11,7 +11,7 @@ class CommunityScreen extends React.PureComponent {
   constructor () {
     super()
     this.state = {
-      selectedIndex: 1,
+      selectedIndex: 0,
       users: [],
       groups: [],
       refreshing: false
