@@ -1,9 +1,9 @@
 import React from 'react'
-import { View, SectionList, Text, Image, TouchableOpacity, ScrollView } from 'react-native'
+import { View, TouchableOpacity, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import ActionBar from 'react-native-action-bar'
-import { Header, SearchBar, List, ListItem, ButtonGroup } from 'react-native-elements'
+import { SearchBar, List, ListItem, ButtonGroup } from 'react-native-elements'
 import styles from './Styles/CommunityScreenStyle'
 import firebase from 'react-native-firebase';
 
