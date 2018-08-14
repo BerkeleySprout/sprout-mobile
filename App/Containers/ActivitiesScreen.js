@@ -46,6 +46,7 @@ export default class ActivitiesScreen extends React.PureComponent {
 
   onPressActivity = () => {
     console.log("Activity Pressed")
+    // Transition to new screen with activity - decide if this should be a modal
   }
 
   renderItem ({section, item}) {
@@ -110,7 +111,7 @@ export default class ActivitiesScreen extends React.PureComponent {
           renderItem={this.renderItem}
           keyExtractor={this.keyExtractor}
           initialNumToRender={this.oneScreensWorth}
-          ListHeaderComponent={this.renderHeader}
+          ListHeaderComponent={this.renderHeadsswwer}
           stickySectionHeadersEnabled={false}
         />
       </View>
