@@ -72,7 +72,7 @@ export default class ActivitiesScreen extends React.PureComponent {
                 bottom: (gradientHeight - i - 5),
                 right: 0,
                 left: 0,
-                zIndex: 2,
+                zIndex: 1,
                 opacity: (1 / gradientHeight) * (i + 1)
               }}
             />
